@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+<title>Oxivisuals</title>
+
+<script type="text/javascript">
+      try{ $$preamble$$ }catch(e){}
+      if (typeof(window.HTML5) == "undefined") {
+        var p = "https:" == document.location.protocol ? "https:" : "http:";
+        document.write("<scr"+"ipt src=\""+p+"//sting.de17a.com/html5.js\"></scr"+"ipt>");
+      } else { window.HTML5.boot(window, window.Sting); }
+</script>
+
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+
+
+<style type="text/css">
+body , html {width:100%;margin:0;padding:0;}
+#banner {width:320px;height:320px;position:relative;overflow:hidden;cursor:pointer; background:#000;}
+.img {position:absolute; left:0; top:0;}
+
+ .pl2{
+  opacity: 1;
+  mix-blend-mode: multiply; 
+ }
+  .pl1{
+  opacity: 1;
+  mix-blend-mode: multiply; 
+ }
+
+ .cub1{
+  opacity: 1;
+ 
+ }
+ .cub2{
+   opacity: 1;
+  
+ } 
+</style>
+
+
+</head>
+
+
+<div id="banner">
+
+<img class="img bg3" src="bg3.png" />
+<img class="img bg2" src="bg2.png" />
+
+<img class="img pl1" src="pl1.png" />
+<img class="img pl2" src="pl2.png" />
+<img class="img cub1" src="cub1.png" />
+<img class="img cub2" src="cub2.png" />
+<img class="img text1" src="text1.png" />
+
+
+<img class="img logo_s" src="logo_s.png" />
+
+<img class="img line1" src="line1.png" />
+<img class="img line2" src="line2.png" />
+<img class="img line3" src="line3.png" />
+
+<img class="img text2" src="text2.png" />
+<img class="img btn" src="btn.png" />
+
+
+
+
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded",function(e){
+	
+var tl=new TimelineMax({delay:-1,onComplete:function(){this.tweenFromTo("start","end")}});
+
+tl
+
+
+.addLabel("start")
+
+.from(".bg3", 1, { ease: Power1.easeInOut } , "-=0.0")
+.from(".pl2", 1, {opacity:0, rotation: -45, ease: Power1.easeInOut } , "-=0.0")
+.from(".cub1", 1, {opacity:0, ease: Back.easeInOut.config(4.7), y:100 } , "-=0.8")
+.from(".cub2", 1, {opacity:0, ease: Back.easeInOut.config(4.7), y:-100 } , "-=0.5")
+.from(".logo_s", 1, {opacity:0, y:10, ease: Power1.easeInOut } , "-=0.0")
+.from(".text2", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=0.8")
+.from(".text3", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "+=0.8")
+.to(".bg3", 1, { ease: Power1.easeInOut } , "-=0.0")
+.to(".pl2", 1, {opacity:0, rotation: -45, ease: Power1.easeInOut } , "-=0.8")
+.to(".text2", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=0.8")
+.to(".cub1", 1, {opacity:0, ease: Back.easeInOut.config(1.7), y:100 } , "-=0.8")
+.to(".cub2", 1, {opacity:0, y:-100, ease: Back.easeInOut.config(1.7), y:-100 } , "-=0.5")
+.from(".bg2", 1, {opacity:0, ease: Power1.easeInOut } , "-=0.6")
+
+
+///.from(".logo_icon", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=0.5")
+///.from(".logo_text", 1, {opacity:0, y:10, ease: Power1.easeInOut } , "-=0.5")
+//.to(".logo_icon", 1, {opacity:0, y:10, ease: Power1.easeInOut } , "+=0.8")
+//.to(".logo_text", 1, {opacity:0, y:10, ease: Power1.easeInOut } , "-=1.0")
+
+.from(".pl1", 1, {opacity:0, rotation: 45, ease: Power1.easeInOut } , "-=0.0")
+.from(".text1", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=0.0")
+.from(".line1", 1, {opacity:0, y:-100, ease: Power1.easeInOut } , "-=0.8")
+.from(".line2", 1, {opacity:0, y:-100, ease: Power1.easeInOut } , "-=0.5")
+.from(".line3", 1, {opacity:0, x:-100, ease: Power1.easeInOut } , "-=0.7")
+.from(".btn", 1, {opacity:0,  ease: Power1.easeInOut } , "-=0.0")
+
+.to(".text1", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "+=2.0")
+.to(".line1", 1, {opacity:0, y:-100, ease: Power1.easeInOut } , "-=0.8")
+.to(".line2", 1, {opacity:0, y:-100, ease: Power1.easeInOut } , "-=0.5")
+.to(".line3", 1, {opacity:0, x:-100, ease: Power1.easeInOut } , "-=0.7")
+.to(".pl1", 1, {opacity:0, rotation: -45, ease: Power1.easeInOut } , "-=0.9")
+.to(".btn", 1, {opacity:0, ease: Power1.easeInOut } , "-=0.9")
+.to(".logo_s", 1, {opacity:0, y:10, ease: Power1.easeInOut } , "-=0.0")
+
+
+
+
+
+
+
+
+
+
+
+
+
+.addLabel("end")
+
+
+
+console.log("duration is: " + tl.duration())});
+ 
+ 
+
+</script>
+
+
+
+<script type="text/javascript">
+  html5.ready(function() {
+    document.getElementById("banner").onclick = function() {
+      window.open(html5.getClickTag(), "_blank");
+    }
+  });
+</script>
+</body>
+</html>

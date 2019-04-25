@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+<title>Oxivisuals</title>
+
+<script type="text/javascript">
+      try{ $$preamble$$ }catch(e){}
+      if (typeof(window.HTML5) == "undefined") {
+        var p = "https:" == document.location.protocol ? "https:" : "http:";
+        document.write("<scr"+"ipt src=\""+p+"//sting.de17a.com/html5.js\"></scr"+"ipt>");
+      } else { window.HTML5.boot(window, window.Sting); }
+</script>
+
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+
+
+<style type="text/css">
+body , html {width:100%;margin:0;padding:0;}
+#banner {width:320px;height:320px;position:relative;overflow:hidden;cursor:pointer; background:#000;}
+.img {position:absolute; left:0; top:0;}
+</style>
+
+
+</head>
+
+
+<div id="banner">
+
+<img class="img bg" src="bg.jpg" />
+
+<img class="img t1" src="t1.png" />
+<img class="img t2" src="t2.png" />
+<img class="img bt" src="bt.png" />
+
+
+<img class="img logo" src="logo.png" />
+
+
+
+
+</div>
+
+<style>
+
+ .pl1{
+  opacity: 1;
+  mix-blend-mode: multiply; 
+ }
+  .pl2{
+  opacity: 1;
+  mix-blend-mode: multiply; 
+ }
+
+ .cub1{
+  opacity: 1;
+ 
+ }
+ .cub2{
+   opacity: 1;
+  
+ } 
+ }
+ .bt{
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+ } 
+
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(e){
+	
+var tl=new TimelineMax({delay:-1,onComplete:function(){this.tweenFromTo("start","end")}});
+
+tl
+
+
+.addLabel("start")
+
+.from(".bg", 0.5, { ease: Power1.easeInOut } , "-=0.0")
+.from(".t1", 1, {opacity:0, y:30,  ease: Power1.easeInOut } , "-=0.0")
+.from(".logo", 1, { ease: Power1.easeInOut } , "-=0.0")
+
+.to(".t1", 1, {opacity:0, y:30, ease: Power1.easeInOut } , "+=3.8")
+
+.from(".t2", 1, {opacity:0, y:30, ease: Power1.easeInOut } , "-=0.0")
+
+.to(".t2", 1, {opacity:0, y:30, ease: Power1.easeInOut } , "+=3.8")
+.to(".logo", 1, { ease: Power1.easeInOut } , "-=0.0")
+
+
+.addLabel("end")
+
+
+
+console.log("duration is: " + tl.duration())});
+ 
+ 
+
+</script>
+
+
+
+<script type="text/javascript">
+  html5.ready(function() {
+    document.getElementById("banner").onclick = function() {
+      window.open(html5.getClickTag(), "_blank");
+    }
+  });
+</script>
+</body>
+</html>

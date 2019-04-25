@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+<title>Kob</title>
+
+<script type="text/javascript">
+      try{ $$preamble$$ }catch(e){}
+      if (typeof(window.HTML5) == "undefined") {
+        var p = "https:" == document.location.protocol ? "https:" : "http:";
+        document.write("<scr"+"ipt src=\""+p+"//sting.de17a.com/html5.js\"></scr"+"ipt>");
+      } else { window.HTML5.boot(window, window.Sting); }
+</script>
+
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+
+
+<style type="text/css">
+body , html {width:100%;margin:0;padding:0;}
+#banner {width:336px;height:280px;position:relative;overflow:hidden;cursor:pointer; background:#000;}
+.img {position:absolute; left:0; top:0;}
+.pl{
+	opacity: 0.6;
+}
+.pl1 {
+	opacity: 0.6;
+
+}
+</style>
+
+
+</head>
+
+
+<div id="banner">
+
+
+
+<img class="img bg3" src="assets/bg3.jpg" />
+<img class="img bg2" src="assets/bg2.jpg" />
+<img class="img bg1" src="assets/bg1.jpg" />
+
+<img class="img pl" src="assets/pl.png" />
+<img class="img pl1" src="assets/pl1.png" />
+<img class="img t1" src="assets/t1.png" />
+<img class="img t2" src="assets/t2.png" />
+<img class="img btn" src="assets/btn.png" />
+
+<img class="img logo" src="assets/logo.png" />
+<img class="img logo1" src="assets/logo1.png" />
+
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded",function(e){
+	
+var tl=new TimelineMax({delay:-1,onComplete:function(){this.tweenFromTo("start","end")}});
+
+tl
+
+
+.addLabel("start")
+
+.from(".bg1", 3, {autoAlpha:1, ease: Power1.easeOut }  , "-=0.0")
+
+.from (".pl", 0.8, {x:-400, autoAlpha:1, ease: Power1.easeOut }  , 0.5)
+.from (".logo", 0.8, {x:-400, autoAlpha:1, ease: Power1.easeOut }  , 0.5)
+.from (".t1", 0.5, {x:-30, autoAlpha:0, ease: Power1.easeOut }  , 1)
+
+.to(".bg1", 1, {opacity:0, ease: Power1.easeOut }  , "-=0.0")
+
+.from(".bg3", 1.5, {scale:1, autoAlpha:0, ease: Power1.easeOut }  , 3.5)
+.from (".pl1", 0.8, {opacity:0, ease: Power1.easeOut }, "-=1.5")
+.from (".t2", 0.5, {x:-60, autoAlpha:0, ease: Power1.easeOut }  , 3.6)
+.from (".btn", 0.5, {y:60, autoAlpha:0, ease: Power1.easeOut }  , 3.5)
+.from (".logo1", 0.5, {opacity:0, ease: Power1.easeOut }  ,"-=0.8")
+
+.to (".pl", 0.5, {x:-300, autoAlpha:1, ease: Power1.easeOut }  , 3.3)
+.to (".logo", 0.5, {x:-300, autoAlpha:1, ease: Power1.easeOut }  , 3.3)
+.to (".t1", 0.5, {x:-30, autoAlpha:0, ease: Power1.easeOut }  , 3.3)
+
+
+
+.to(".bg3", 1.5, {scale:1, autoAlpha:0, ease: Power1.easeOut }  , "-=0.5")
+
+
+.to (".t2", 0.5, {x:-60, autoAlpha:0, ease: Power1.easeOut }  , 9.5)
+.to (".btn", 0.5, {y:60, autoAlpha:0, ease: Power1.easeOut }  , 9.5)
+.to (".logo1", 0.5, {opacity:0, ease: Power1.easeOut }  ,"-=0.8")
+
+
+.to(".bg3", 1, {autoAlpha:0, ease: Power1.easeOut }  , 9.6)
+
+
+.addLabel("end")
+
+
+
+console.log("duration is: " + tl.duration())});
+ 
+ 
+
+</script>
+
+
+
+<script type="text/javascript">
+  html5.ready(function() {
+    document.getElementById("banner").onclick = function() {
+      window.open(html5.getClickTag(), "_blank");
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+
+
+
+<title>Soulmate</title>
+
+
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet');
+
+body , html {width:100%;margin:0;padding:0;background:#fff;}
+
+
+#banner{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left:0;
+	background-color: #fff;
+	cursor: pointer;
+
+}
+
+.banner_size{
+	width: 336px;
+	height: 280px;
+
+}
+
+.bg {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	-ms-transform: rotate(0.01deg);
+    -webkit-transform: rotate(0.01deg);
+    transform: rotate(0.01deg);
+
+}
+
+.box {
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+ 	z-index: 100;
+ 	border: 1px solid #000; 
+
+}
+
+.img{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	-ms-transform: rotate(0.01deg); /* IE 9 */
+    -webkit-transform: rotate(0.01deg); /* Chrome, Safari, Opera */
+    transform: rotate(0.01deg);
+}
+.img img{
+	-ms-transform: rotate(-0.01deg); /* IE 9 */
+    -webkit-transform: rotate(-0.01deg); /* Chrome, Safari, Opera */
+    transform: rotate(-0.01deg);
+     backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -webkit-crisp-edges;
+    will-change:transform;
+}
+.txt {
+	font-family: 'Open Sans', sans-serif;	
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	font-weight: 600;
+	color: #fff;
+}
+.h1 {
+	font-family: 'Open Sans', sans-serif;	
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	font-weight: 600;
+	color: #e61e3c;
+	text-shadow: 1px 1px 1px black;
+}
+.t1 {
+	font-size: 22px;
+	top: 40px;
+	left: 20px;
+}
+.t2 {
+	font-size: 30px;
+	top: 70px;
+	left: 20px;
+}
+
+.curs {
+	font-family: 'Open Sans', sans-serif;	
+	height: 100%;
+	position: absolute;	
+	font-weight: 600;
+	color: #fff;
+	font-size: 30px;
+	top: 66px;
+	left: 20px;
+}
+.t3 {
+	font-size: 32px;
+	top: 130px;
+	left: 20px;
+}
+
+
+
+
+.btn {
+  background-color: #fdd700;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  padding: 14px 40px;
+  border-radius: 30px;
+  position: absolute;
+  top: 70%;
+  left: 5%;
+
+}
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.tt {
+	font-family: 'Open Sans', sans-serif;
+}
+
+</style>
+</head>
+<body class="reset">
+
+<a id="click" target="_blank">
+
+
+<div id="banner" class="banner_size">
+<div class="img bg2"><img src="bg2.png"></div>
+<div class="img logo"><img src="logo.png"></div>
+
+<div class="txt t1">SKAPA DIN NYA</div>
+<div class="txt t2 hemsida">HEMSIDA</div>
+<div class="txt t2 webshop">WEBBSHOP</div>
+<div class="txt t2 blogg">BLOGG</div>
+<div class="curs">|</div>
+<div class="h1 t3">från 29kr</div>
+<div class="btn tt button1 button2">Börja nu</div>
+
+
+
+
+
+</div>
+
+</a>
+
+
+
+
+
+<script>
+
+
+var tl=new TimelineMax({repeat:-1});
+//TweenMax.set(".logo", {transformOrigin:"0px 0px"});
+
+
+
+tl
+
+  .set(".hemsida", {width:0})
+   .set(".webshop", {width:0})
+    .set(".blogg", {width:0})
+
+.from (".bg2", 0.8, { ease:Power1.easeInOut},"-=0.0")
+.from(".logo", 0.8, {opacity:0, ease:Power1.easeInOut},"-=0.8")
+.to(".logo", 0.8, {opacity:0, ease:Power1.easeInOut},"-=0.1")
+.from(".bt1", 0.8, {opacity:0, y:100, ease:Power1.easeInOut},"-=0.0")
+
+
+.from(".t1", 1, {opacity:0, ease:SteppedEase.config(7)}, "-=0.6")
+.from(".text", 0.8, {opacity:0, ease:Power1.easeInOut},"-=0.6")
+.from(".curs", 1, {opacity:0, ease:SteppedEase.config(7)}, "-=0.6")
+.from(".t3", 1, {opacity:0, ease:SteppedEase.config(7)}, "-=0.6")
+.from(".btn", 1, {opacity:0, ease:SteppedEase.config(7)}, "-=0.6")
+	
+.to(".hemsida", 1, {width:150, ease:SteppedEase.config(7)}, "-=1.0")
+.to(".curs", 1, {left:150, ease:SteppedEase.config(7)}, "-=1.0")
+.to(".hemsida", 1, {width:0, ease:SteppedEase.config(7)}, "+=1.0")
+.to(".curs", 1, {left:20, ease:SteppedEase.config(7)}, "-=1.0")
+
+	
+	.to(".webshop", 1, {width:182, ease:SteppedEase.config(8)}, "+=0.2")
+	.to(".curs", 1, {left:182,ease:SteppedEase.config(8)}, "-=1.0")
+.to(".webshop", 1, {width:0, ease:SteppedEase.config(7)}, "+=1.0")
+.to(".curs", 1, {left:20, ease:SteppedEase.config(7)}, "-=1.0")
+  
+  .to(".blogg", 1, {width:123,ease:SteppedEase.config(5)}, "+=0.2")
+  .to(".curs", 1, {left:123, ease:SteppedEase.config(5)}, "-=1.0")
+.to(".blogg", 1, {width:0, ease:SteppedEase.config(7)}, "+=1.0")
+.to(".curs", 1, {left:20, ease:SteppedEase.config(7)}, "-=1.0")
+
+
+.to(".t1", 1, {opacity:0, ease:SteppedEase.config(7)}, "-=0.0")
+.to(".curs", 1, {opacity:0, ease:SteppedEase.config(7)}, "-=1.0")
+.to(".text", 0.8, {opacity:0, ease:Power1.easeInOut},"-=1.0")
+.to(".t3", 1, {opacity:0, ease:SteppedEase.config(7)}, "-=0.8")
+.to(".btn", 0.8, {opacity:0, y:10, ease:Power1.easeInOut},"-=0.0")
+.to(".hemsida", 0.1, {opacity:0,  ease:Power1.easeInOut},"-=0.0")
+.to(".webshop", 0.1, {opacity:0,  ease:Power1.easeInOut},"-=0.0")
+.to(".blogg", 0.1, {opacity:0,  ease:Power1.easeInOut},"-=0.0")
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

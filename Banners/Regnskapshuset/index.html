@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+
+<script type="text/javascript">
+  try{ $$preamble$$ }catch(e){}
+  if (typeof(window.HTML5) == 'undefined') {
+    var p = 'https:' == document.location.protocol ? 'https:' : 'http:';
+    document.write('<scr'+'ipt src="' + p + '//sting.de17a.com/html5.js"></scr'+'ipt>');
+  } else { window.HTML5.boot(window, window.Sting); }
+</script>
+
+<title>Revisorkollegeit</title>
+
+
+<style type="text/css">
+body , html {width:100%;margin:0;padding:0;background:#fff;}
+
+
+#banner{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left:0;
+	background-color: #fff;
+	cursor: pointer;
+
+}
+
+.banner_size{
+	width: 320px;
+	height: 320px;
+
+}
+
+.bg1 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	-ms-transform: rotate(0.01deg);
+    -webkit-transform: rotate(0.01deg);
+    transform: rotate(0.01deg);
+}
+
+.box {
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+ 	z-index: 100;
+ 	  border: 1px solid #000; 
+
+}
+
+.img{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	-ms-transform: rotate(0.01deg); /* IE 9 */
+    -webkit-transform: rotate(0.01deg); /* Chrome, Safari, Opera */
+    transform: rotate(0.01deg);
+}
+.img img{
+	-ms-transform: rotate(-0.01deg); /* IE 9 */
+    -webkit-transform: rotate(-0.01deg); /* Chrome, Safari, Opera */
+    transform: rotate(-0.01deg);
+     backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -webkit-crisp-edges;
+    will-change:transform;
+}
+
+</style>
+</head>
+<body class="reset">
+
+<a id="click" target="_blank">
+
+
+<div id="banner" class="banner_size">
+
+<div class="img bg"><img src="bg.jpg"></div>
+
+<div class="img logo"><img src="logo.png"></div>
+<div class="img t1"><img src="t1.png"></div>
+<div class="img t2"><img src="t2.png"></div>
+
+
+
+
+
+<div class="img box"></div>
+
+</div>
+
+</a>
+
+
+
+
+
+<script>
+
+var tl=new TimelineMax({repeat:-1});
+TweenMax.set(".t1", {transformOrigin:"70px 280px"});
+
+
+
+tl
+  .from(".bg",1, { scale:1.1, ease:Power1.easeInOut},"-=0.0")
+.from(".t1",1, { opacity:0, x:-50,  ease:Power1.easeInOut},"-=0.0")
+
+
+  .to(".t1",1, { opacity:0, y:20, ease:Power1.easeInOut},"+=2.5")
+
+  .from(".t2",1, { opacity:0, x:-50,  ease:Power1.easeInOut},"-=0.0")
+  .to(".t2",1, { opacity:0, y:20, ease:Power1.easeInOut},"+=2.5")
+  .to([".bg"],0.5, { scale:1.1,  ease:Power1.easeInOut},"+=0.5")
+
+</script>
+
+
+<script type="text/javascript">
+  html5.ready(function() {
+    document.getElementById("banner").onclick = function() {
+      window.open(html5.getClickTag(), "_blank");
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

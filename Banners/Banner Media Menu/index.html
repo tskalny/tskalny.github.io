@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+<title>MediaMenu</title>
+
+<script type="text/javascript">
+      try{ $$preamble$$ }catch(e){}
+      if (typeof(window.HTML5) == "undefined") {
+        var p = "https:" == document.location.protocol ? "https:" : "http:";
+        document.write("<scr"+"ipt src=\""+p+"//sting.de17a.com/html5.js\"></scr"+"ipt>");
+      } else { window.HTML5.boot(window, window.Sting); }
+</script>
+
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+
+
+<style type="text/css">
+body , html {width:100%;margin:0;padding:0;}
+#banner {width:500px;height:250px;position:relative;overflow:hidden;cursor:pointer; background:#000;}
+.img {position:absolute; left:0; top:0;}
+</style>
+
+
+</head>
+
+<body class="reset">
+<div id="banner">
+
+	
+
+<img class="img bg" src="assets/bg.jpg" />
+<img class="img ic1" src="assets/ic1.png" />
+<img class="img ic2" src="assets/ic2.png" />
+<img class="img ic3" src="assets/ic3.png" />
+<img class="img ic4" src="assets/ic4.png" />
+
+
+<img class="img el1" src="assets/el1.png" />
+<img class="img el2" src="assets/el2.png" />
+<img class="img el3" src="assets/el3.png" />
+<img class="img el4" src="assets/el4.png" />
+<img class="img el5" src="assets/el5.png" />
+<img class="img el6" src="assets/el6.png" />
+<img class="img text1" src="assets/text1.png" />
+<img class="img text2" src="assets/text2.png" />
+<img class="img text3" src="assets/text3.png" />
+<img class="img logo" src="assets/logo.png" />
+
+
+
+
+
+</div>
+
+
+<script>
+
+	
+document.addEventListener("DOMContentLoaded",function(e){
+  
+var tl=new TimelineMax({delay:-1,onComplete:function(){this.tweenFromTo("start","end")}});
+
+tl
+
+
+.addLabel("start")
+
+
+.from(".bg", 1, { ease: Power1.easeInOut } , "-=0.0")
+
+.from(".el1", 3, {opacity:0, x:-50, y:150, ease: Power1.easeInOut } , "-=1.0")
+.from(".el2", 3, {opacity:0, x:50, y:-200, ease: Power1.easeInOut } , "-=2.8")
+.from(".el3", 2, {opacity:0, ease: Power1.easeInOut } , "-=1.5")
+.from(".el4", 2, {opacity:0, y:-50, ease: Power1.easeInOut } , "-=1.8")
+//.from(".bg1", 4, {opacity:0, ease: Power1.easeInOut } , "-=0.0")
+.from(".el5", 2, {opacity:0, x:-30, y:-100, ease: Power1.easeInOut } , "-=1.8")
+.from(".el6", 2, {opacity:0, y:100, ease: Power1.easeInOut } , "-=1.8")
+.from(".text1", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=4.3")
+.from(".ic1", 0.3, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=0.0")
+.from(".ic2", 0.3, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=0.0")
+.from(".ic3", 0.3, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=0.0")
+.from(".ic4", 0.3, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=0.0")
+
+
+
+
+.from(".logo", 1, {opacity:0, ease: Power1.easeInOut } , "-=4.2")
+.to(".text1", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "+=0.6")
+.from(".text2", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "+=0.3")
+.to(".ic1",0.2, {scale:1.1,  ease:Power1.easeInOut, rotationZ:0.01}, "+=0.1")
+.to(".ic1",0.2, {scale:1.0,  ease:Power1.easeInOut}, "+=0.0")
+.to(".ic2",0.2, {scale:1.1,  ease:Power1.easeInOut, rotationZ:0.01}, "+=0.1")
+.to(".ic2",0.2, {scale:1.0,  ease:Power1.easeInOut}, "+=0.0")
+.to(".ic3",0.2, {scale:1.1,  ease:Power1.easeInOut, rotationZ:0.01}, "+=0.1")
+.to(".ic3",0.2, {scale:1.0,  ease:Power1.easeInOut}, "+=0.0")
+.to(".ic4",0.2, {scale:1.1,  ease:Power1.easeInOut, rotationZ:0.01}, "+=0.1")
+.to(".ic4",0.2, {scale:1.0,  ease:Power1.easeInOut}, "+=0.0")
+.to(".text2", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "+=1.0")
+.from(".text3", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=0.3")
+.to(".ic1",0.2, {scale:1.1,  ease:Power1.easeInOut, rotationZ:0.01}, "+=0.1")
+.to(".ic1",0.2, {scale:1.0,  ease:Power1.easeInOut}, "+=0.0")
+.to(".ic2",0.2, {scale:1.1,  ease:Power1.easeInOut, rotationZ:0.01}, "+=0.1")
+.to(".ic2",0.2, {scale:1.0,  ease:Power1.easeInOut}, "+=0.0")
+.to(".ic3",0.2, {scale:1.1,  ease:Power1.easeInOut, rotationZ:0.01}, "+=0.1")
+.to(".ic3",0.2, {scale:1.0,  ease:Power1.easeInOut}, "+=0.0")
+.to(".ic4",0.2, {scale:1.1,  ease:Power1.easeInOut, rotationZ:0.01}, "+=0.1")
+.to(".ic4",0.2, {scale:1.0,  ease:Power1.easeInOut}, "+=0.0")
+.to(".text3", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "+=1.0")
+
+
+
+
+
+.addLabel("end")
+
+
+
+console.log("duration is: " + tl.duration())});
+
+</script>
+
+
+
+<script type="text/javascript">
+  html5.ready(function() {
+    document.getElementById("banner").onclick = function() {
+      window.open(html5.getClickTag(), "_blank");
+    }
+  });
+</script>
+</body>
+</html>

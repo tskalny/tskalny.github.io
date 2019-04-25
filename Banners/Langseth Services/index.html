@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+<title>Langseth Services</title>
+
+<style type="text/css">
+body , html {width:100%;margin:0;padding:0;background:#fff;}
+
+#banner{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left:0;
+	background-color: #fff;
+	cursor: pointer;
+
+}
+
+.banner_size{
+	width: 336px;
+	height: 280px;
+
+}
+
+.box {
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+ 	z-index: 100;
+ 	  border: 1px solid #000; 
+
+}
+
+.img{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+</style>
+
+</head>
+
+<body class="reset">
+
+<div id="banner" class="banner_size">
+<div class="img bg5"><img src="bg5.jpg"></div>
+<div class="img bg4"><img src="bg4.jpg"></div>
+<div class="img bg3"><img src="bg3.jpg"></div>
+<div class="img bg2"><img src="bg2.jpg"></div>
+<div class="img bg1"><img src="bg1.jpg"></div>
+
+
+
+
+<div class="img logo_top"><img src="logo_top.png"></div>
+
+<div class="img logo_s"><img src="logo_s.png"></div>
+<div class="img text1"><img src="text1.png"></div>
+<div class="img text2"><img src="text2.png"></div>
+<div class="img bt"><img src="bt.png"></div>
+<div class="img ar"><img src="ar.png"></div>
+
+</div>
+
+<script>
+
+var tl=new TimelineMax({repeat:-1,delay:0,onComplete:function(){this.tweenFromTo("start","end")}});
+
+tl
+
+.from(".bg1", 1, {  ease:Power1.easeInOut},"-=0.0")
+.from(".logo_top", 1,{opacity:0, ease:Power1.easeInOut}, "-=0.8")
+.to(".logo_top", 1,{opacity:0, ease:Power1.easeInOut}, "+=0.8")
+.to(".bg1", 0.8, { y:300, ease:Power1.easeInOut},"-=0.0")
+
+.from(".text1", 1, {opacity:0, ease:Power1.easeInOut},"-=0.0")
+.from(".logo_s", 0.5, {opacity:0, ease:Power1.easeInOut},"-=0.0")
+.from(".bt", 0.8, {opacity:0, ease:Power1.easeInOut},"-=0.0")
+
+.from(".ar", 0.8, {opacity:0, ease:Power1.easeInOut},"-=0.7")
+.to(".ar", 0.2, {x:5, ease:Power1.easeInOut},"-=0.0")
+.to(".ar", 0.2, {x:0, ease:Power1.easeInOut},"-=0.0")
+.to(".ar", 0.2, {x:5, ease:Power1.easeInOut},"-=0.0")
+.to(".ar", 0.2, {x:0, ease:Power1.easeInOut},"-=0.0")
+.to(".bg2", 1, {opacity:0, ease:Power1.easeInOut},"+=0.8")
+.to(".text1", 1, {opacity:0, ease:Power1.easeInOut},"-=0.0")
+
+.from(".text2", 1, {opacity:0, ease:Power1.easeInOut},"-=0.0")
+.to(".ar", 0.2, {x:5, ease:Power1.easeInOut},"-=0.0")
+.to(".ar", 0.2, {x:0, ease:Power1.easeInOut},"-=0.0")
+.to(".ar", 0.2, {x:5, ease:Power1.easeInOut},"-=0.0")
+.to(".ar", 0.2, {x:0, ease:Power1.easeInOut},"-=0.0")
+.to(".bg3", 1, {opacity:0, ease:Power1.easeInOut},"+=1.0")
+
+.to(".bg4", 1, {opacity:0, ease:Power1.easeInOut},"+=1.0")
+ 
+.to([".text2",".bt",".ar",".logo_s"], 1, { opacity:0,  ease:Power1.easeInOut},"-=0.9")
+
+</script>
+
+</body>
+</html>

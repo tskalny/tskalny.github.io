@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="ad.size" content="width=336,height=280">
+<script type="text/javascript" src="https://acdn.adnxs.com/html5-lib/1.3.0/appnexus-html5-lib.min.js"></script>
+<script src='https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js'></script>
+
+<title>Synslaser</title>
+<style type="text/css">
+body , html {width:100%;margin:0;padding:0;background:#eee;}
+
+#banner {
+	width:336px;
+	height:280px;
+	position:relative;
+	background: #ffffff;
+
+	overflow:hidden;
+	cursor:pointer;
+}
+
+.box{
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+	.i1{
+	width: 100%;
+	top:-50	;
+	height: 100%;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.img {position:absolute;}
+
+</style>
+</head>
+<body>
+
+
+<div id="banner">
+
+
+ 
+    
+       
+
+ <img class="img bg2" src="assets/bg2.jpg" />
+ <img class="img bg3" src="assets/bg3.jpg" />
+ <img class="img pl" src="assets/pl.png" />
+ <img class="img logo" src="assets/logo.png" />
+
+     <img class="img t1" src="assets/t1.png" />
+
+ <img class="img cta" src="assets/cta.png" />
+
+   
+   
+   
+    <div class="img box"></div>
+</div>
+
+
+
+<script>
+
+var loops=0;
+var tl=new TimelineMax({repeat:-1});
+var tlw=new TimelineMax({repeat:7});
+
+//frame1
+
+tl
+ .from(".bg3",1.0,{opacity:0, scale:1.0, ease:Power1.easeOut},"-=0.0")
+  
+ .from(".logo",0.8,{opacity:0,  ease:Power1.easeInOut},"-=0.2")
+
+ .to(".bg3",1.5,{opacity:0, ease:Power1.easeInOut},"+=1.0")
+ .from(".bg2",1,{opacity:0, scale:1.2,ease:Power1.easeOut},"-=0.5")
+ .from(".pl",0.8,{ y:100,  ease:Power1.easeInOut},"-=1.5")
+ .from(".t1",0.8,{opacity:0, ease:Power1.easeInOut},"-=0.8")
+ 
+ .to(".pl",0.8,{opacity:0, y:100,  ease:Power1.easeInOut},"+=1.8")
+ .to(".t1",0.8,{opacity:0, ease:Power1.easeInOut},"-=1.0")
+
+
+
+ .from(".cta",1, { opacity:0,  ease:Power1.easeInOut},"-=0.5")
+	.to(".cta",0.2, { scale:0.98,  ease:Power1.easeInOut},"-=0.0")
+	.to(".cta",0.2, { scale:1,  ease:Power1.easeInOut},"-=0.0")
+	.to(".cta",0.2, { scale:0.98,  ease:Power1.easeInOut},"-=0.0")
+	.to(".cta",0.2, { scale:1,  ease:Power1.easeInOut},"+=1.9")
+
+
+ .to(".bg2",1.0,{opacity:0, scale:1.2,ease:Power1.easeOut},"-=0.5")
+ .to(".logo",0.8,{opacity:0,  ease:Power1.easeInOut},"-=1.0")
+ .to(".cta",0.2, { opacity:0,  ease:Power1.easeInOut},"-=0.8")
+
+ 
+	
+	
+
+tlw
+ 
+  
+	console.log(tl.duration())
+	console.log(tlw.duration())
+
+
+</script>
+
+
+</body>
+</html>

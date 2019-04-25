@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+
+<script type="text/javascript">
+  try{ $$preamble$$ }catch(e){}
+  if (typeof(window.HTML5) == 'undefined') {
+  } else { window.HTML5.boot(window, window.Sting); }
+</script>
+
+<title>Revisorkollegeit</title>
+
+
+<style type="text/css">
+body , html {width:100%;margin:0;padding:0;background:#fff;}
+
+
+#banner{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left:0;
+	background-color: #fff;
+	cursor: pointer;
+
+}
+
+.banner_size{
+	width: 320px;
+	height: 320px;
+
+}
+
+.bg1 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	-ms-transform: rotate(0.01deg);
+    -webkit-transform: rotate(0.01deg);
+    transform: rotate(0.01deg);
+}
+
+.box {
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+ 	z-index: 100;
+ 	  border: 1px solid #000; 
+
+}
+
+.img{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	-ms-transform: rotate(0.01deg); /* IE 9 */
+    -webkit-transform: rotate(0.01deg); /* Chrome, Safari, Opera */
+    transform: rotate(0.01deg);
+}
+.img img{
+	-ms-transform: rotate(-0.01deg); /* IE 9 */
+    -webkit-transform: rotate(-0.01deg); /* Chrome, Safari, Opera */
+    transform: rotate(-0.01deg);
+     backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -webkit-crisp-edges;
+    will-change:transform;
+}
+
+</style>
+</head>
+<body class="reset">
+
+<a id="click" target="_blank">
+
+
+<div id="banner" class="banner_size">
+<div class="img ft3"> <img src="ft3.png" /></div>
+<div class="img ft"> <img src="ft.png" /></div>
+<div class="img hd"> <img src="hd.png" /></div>
+<div class="img pl"> <img src="pl.png" /></div>
+<div class="img logo2"> <img src="logo2.png" /></div>
+<div class="img text2"> <img src="text2.png" /></div>
+<div class="img text3"> <img src="text3.png" /></div>
+<div class="img bm"> <img src="bm.png" /></div>
+<div class="img bt"> <img src="bt.png" /></div>
+
+
+
+
+<div class="img box"></div>
+
+</div>
+
+</a>
+
+
+
+
+
+<script>
+
+var tl=new TimelineMax({repeat:-1});
+
+
+tl
+
+.from(".hd",1, {opacity:0, y:-100, ease:Power1.easeInOut},"-=0.0" )	
+.from(".ft",1, { opacity:0,  ease:Power1.easeInOut},"-=0.0")
+.from(".pl",1, { opacity:0, x:-50, ease:Power1.easeInOut},"-=0.0")
+.to(".pl",1, { opacity:0, x:-50, ease:Power1.easeInOut},"+=2.0")
+.to(".hd",1, {opacity:0, y:-100, ease:Power1.easeInOut},"-=0.0" )
+.to(".ft",0.8, { opacity:0,  ease:Power1.easeInOut},"-=0.7")
+.from(".ft3",0.8, { opacity:0, ease:Power1.easeInOut},"-=0.0")
+ .from(".text2",0.7, { opacity:0, y: 20, x:-30, ease:Power1.easeInOut},"-=0.7")
+ .from(".text3",0.7, { opacity:0, y: 20, x:-30, ease:Power1.easeInOut},"+=0.7")
+ .from(".ft2",1, { opacity:0, y:20, ease:Power1.easeInOut},"-=1.0")
+
+  .from(".logo2",1, { opacity:0,   ease:Power1.easeInOut},"-=0.0")
+  .from(".bm",0.8, { opacity:0, y:20, ease:Power1.easeInOut},"-=0.8")
+  .from(".bt",0.8, { opacity:0, y:20, ease:Power1.easeInOut},"-=0.7")
+  .to(".bt",0.8, { opacity:0, ease:Power1.easeInOut},"+=2.0")
+</script>
+
+
+<script type="text/javascript">
+  html5.ready(function() {
+    document.getElementById("banner").onclick = function() {
+      window.open(html5.getClickTag(), "_blank");
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
