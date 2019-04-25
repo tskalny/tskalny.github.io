@@ -1,0 +1,9 @@
+{
+  "title": "Revisorkollegiet",
+  "width": 336,
+  "height": 280,
+  "source": "index.html",
+  "clicktags": {
+    "clickTAG": "http://example.org"
+  }
+}
