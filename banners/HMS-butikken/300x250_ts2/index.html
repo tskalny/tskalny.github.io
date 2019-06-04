@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+  <script src='https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js'></script>
+
+<script type="text/javascript">
+  try{ $$preamble$$ }catch(e){}
+  if (typeof(window.HTML5) == 'undefined') {
+    var p = 'https:' == document.location.protocol ? 'https:' : 'http:';
+    document.write('<scr'+'ipt src="' + p + '//sting.de17a.com/html5.js"></scr'+'ipt>');
+  } else { window.HTML5.boot(window, window.Sting); }
+</script>
+
+
+
+<title>Arbeidsmiljøsenteret</title>
+
+
+<style type="text/css">
+.reset{margin:0; padding:0}
+
+
+#banner{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left:0;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.banner_size{
+	width: 300px;
+	height: 250px;
+
+}
+
+.img{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.box {
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+ 	border:1px solid #DADADA;
+}
+
+
+.btn_over {
+	opacity:0;
+}
+
+.btn_over {-webkit-transition: opacity 0.4s ease 0s;
+-moz-transition: opacity 0.4s ease 0s;
+-o-transition: opacity 0.4s ease 0s;
+transition: opacity 0.4s ease 0s;}
+
+#banner:hover  .btn_over {opacity:1;}
+/*********************/
+
+
+
+</style>
+</head>
+<body class="reset">
+
+
+<div id="banner" class="banner_size">
+<div class="img bg"><img src="assets/bg.jpg"></div>
+<div class="img logo"><img src="assets/logo.png"></div>
+<div class="img t"><img src="assets/t.png"></div>
+<div class="img box"></div>
+</div>
+
+
+
+
+
+
+<script>
+var tl=new TimelineMax({repeat:1,delay:0,onComplete:function(){this.tweenFromTo("start","end")}});
+
+
+tl.addLabel("start")
+.from(".bg", 3, {x:-20, ease:Power1.easeOut}, 0 )
+.from(".t", 1, {x:-20, opacity:0, ease:Back.easeOut}, 0.5 ).addLabel("end")
+
+.to(".t", 1, { x:-20, opacity:0, ease:Back.easeOut}, 4)
+.to(".bg", 3, {x:-20, ease:Power1.easeOut}, 4 )
+</script>
+
+
+<script type="text/javascript">
+  html5.ready(function() {
+    document.getElementById("banner").onclick = function() {
+      window.open(html5.getClickTag(), "_blank");
+    }
+  });
+</script>
+
+</body>
+</html>

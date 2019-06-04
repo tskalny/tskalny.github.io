@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="ad.size" content="width=300,height=250">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.1_92cf05aba6ca4ea5cbc62b5a7cb924e3_min.js"></script>
+<script type="text/javascript"> var clickTag = "http://www.google.com"; </script>
+</head>
+
+<title>Biotherm</title>
+
+<style type="text/css">
+.reset{margin:0; padding:0}
+
+
+#banner{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left:0;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.banner_size{
+	width: 300px;
+	height: 250px;
+}
+
+.box {
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+ 	z-index: 100;
+}
+
+.img{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+
+</style>
+</head>
+<body class="reset">
+ <div id="banner" class="banner_size">
+    <div class="img bg"><img src="assets/bg.jpg"></div>
+    <div class="img t1"><img src="assets/t1.png"></div>
+    <div class="img t2"><img src="assets/t2.png"></div>
+    <div class="img logo"><img src="assets/logo.png"></div>
+    <div class="img bt"><img src="assets/bt.png"></div>
+    <div class="img box"></div>
+ </div>
+
+
+
+<script>
+
+var tl=new TimelineMax({repeat:0,delay:0,onComplete:function(){this.tweenFromTo("start","end")}});
+TweenMax.set(".bt", {transformPerspective:200, transformOrigin:"202px 160px"});
+
+//frame1
+  tl.addLabel("start")
+  .from(".t1", 1.7, { opacity:0,  y:-20, ease:Back.easeInOut},0)
+  .from(".t2", 1.7, { opacity:0,  y:-20, ease:Back.easeInOut},0.3)
+  .from(".bt", 1.7, { opacity:0,  y:-20, ease:Back.easeInOut},0.5).addLabel("end")
+  .to(".bg", 3.7, { scale:1.1, y:0, ease:Power2.easeOut},0)
+
+  .to(".bt", 0.13, {y:2, yoyo:true, repeat:5},2.5)
+
+	//.to(".bt", 0.13, {y:2, yoyo:true, repeat:5},2.5)
+
+  .to(".bg", 2.7, { scale:1,  y:0, ease:Power2.easeOut},6)
+  .to(".bt", 1.7, { opacity:0, y:-20, ease:Back.easeInOut},6)
+  .to(".t1", 1.7, { opacity:0, y:20, ease:Back.easeInOut},6)
+  .to(".t2", 1.7, { opacity:0, y:20, ease:Back.easeInOut},6)
+
+</script>
+
+</body>
+</html>

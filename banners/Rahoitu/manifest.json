@@ -1,0 +1,16 @@
+{
+    "version": "1.0",
+    "title": "Rahoitu",
+    "description": "Adform Standard MPU v 1.5",
+    "width": 468,
+    "height": 400,
+    "events": {
+        "enabled": 0,
+        "list": {
+        }
+    },
+    "clicktags": {
+        "clickTAG": "http:\/\/www.adform.com"
+    },
+    "source": "index.html"
+}

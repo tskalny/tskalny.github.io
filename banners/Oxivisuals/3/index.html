@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+<title>Oxivisuals</title>
+
+<script type="text/javascript">
+      try{ $$preamble$$ }catch(e){}
+      if (typeof(window.HTML5) == "undefined") {
+        var p = "https:" == document.location.protocol ? "https:" : "http:";
+        document.write("<scr"+"ipt src=\""+p+"//sting.de17a.com/html5.js\"></scr"+"ipt>");
+      } else { window.HTML5.boot(window, window.Sting); }
+</script>
+
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+
+
+<style type="text/css">
+body , html {width:100%;margin:0;padding:0;}
+#banner {width:320px;height:320px;position:relative;overflow:hidden;cursor:pointer; background:#000;}
+.img {position:absolute; left:0; top:0;}
+</style>
+
+
+</head>
+
+
+<div id="banner">
+
+<img class="img bg2" src="bg2.jpg" />
+<img class="img bg1" src="bg1.jpg" />
+
+
+<img class="img pl1" src="pl1.png" />
+<img class="img pl2" src="pl2.png" />
+<img class="img text1" src="text1.png" />
+
+
+<img class="img logo_s" src="logo_s.png" />
+<img class="img text2" src="text2.png" />
+<img class="img btn" src="btn.png" />
+
+
+
+
+</div>
+
+<style>
+
+ .pl1{
+  opacity: 1;
+  mix-blend-mode: multiply; 
+ }
+  .pl2{
+  opacity: 1;
+  mix-blend-mode: multiply; 
+ }
+
+ .cub1{
+  opacity: 1;
+ 
+ }
+ .cub2{
+   opacity: 1;
+  
+ } 
+
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(e){
+	
+var tl=new TimelineMax({delay:-1,onComplete:function(){this.tweenFromTo("start","end")}});
+
+tl
+
+
+.addLabel("start")
+
+.from(".bg1", 0.5, { ease: Power1.easeInOut } , "-=0.0")
+.from(".pl1", 1, { y:300,  ease: Power1.easeInOut } , "-=0.0")
+.from(".logo_s", 1, {opacity:0, y:10, ease: Power1.easeInOut } , "-=0.0")
+.from(".text1", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=0.8")
+.to(".bg1", 0.8, { opacity:0, ease: Power1.easeInOut } , "+=1.5")
+.to(".pl1", 1, {opacity:0, y:300, ease: Power1.easeInOut } , "-=0.8")
+.to(".text1", 0.8, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=1.0")
+.from(".bg2", 1, {opacity:0, ease: Power1.easeInOut } , "-=1.9")
+
+
+.from(".pl2", 1, { y:300, ease: Power1.easeInOut } , "-=0.0")
+.from(".text2", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "-=0.0")
+
+.from(".btn", 1, {opacity:0,  ease: Power1.easeInOut } , "-=0.0")
+
+.to(".text2", 1, {opacity:0, y:-10, ease: Power1.easeInOut } , "+=2.0")
+.to(".pl2", 1, { y:300, ease: Power1.easeInOut } , "-=0.9")
+.to(".btn", 1, {opacity:0, ease: Power1.easeInOut } , "-=0.9")
+.to(".logo_s", 1, {opacity:0, y:10, ease: Power1.easeInOut } , "-=0.0")
+
+
+
+
+
+
+.addLabel("end")
+
+
+
+console.log("duration is: " + tl.duration())});
+ 
+ 
+
+</script>
+
+
+
+<script type="text/javascript">
+  html5.ready(function() {
+    document.getElementById("banner").onclick = function() {
+      window.open(html5.getClickTag(), "_blank");
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+<script>var qparams=function(){var r=window.location.search.substr(1).split("&"),o={};if(""==r)return{};for(var n=0;n<r.length;++n){var t=r[n].split("=");2==t.length&&(o[t[0]]=decodeURIComponent(t[1].replace(/\+/g," ")))}return o}();
+</script>
+<script src='https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js'></script>
+
+<title>Landeker</title>
+
+<style type="text/css">
+body , html {width:100%;margin:0;padding:0;background:#fff;}
+#banner{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left:0;
+	background-color: #fff;
+	cursor: pointer;
+}
+.banner_size{
+	width: 1000px;
+	height: 200px;
+
+}
+.box {
+	border:1px solid #dedede;
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+ 	z-index: 100;
+}
+.img{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+</style>
+</head>
+<body class="reset">
+
+<a href="javascript:window.open(qparams.click_url, '_blank')">
+<div id="banner" class="banner_size">
+<div class="img bg"><img src="assets/bg.jpg"></div>
+<div class="img pl1"><img src="assets/pl1.png"></div>
+<div class="img t1"><img src="assets/t1.png"></div>
+<div class="img t2"><img src="assets/t2.png"></div>
+<div class="img t3"><img src="assets/t3.png"></div>
+<div class="img t4"><img src="assets/t4.png"></div>
+<div class="img t_b"><img src="assets/t_b.png"></div>
+<div class="img logo"><img src="assets/logo.png"></div>
+<div class="img box"></div>
+</div>
+</a>
+
+<script>
+
+var tl=new TimelineMax({repeat:0,delay:0,onComplete:function(){this.tweenFromTo("start","end")}});
+
+  tl.addLabel("start")
+
+  .to(".bg", 13, { ease:Sine.easeOut, x:-400}, 0)
+.from(".logo", 1, { ease: Power1.easeInOut } , "-=0.0")
+.from(".t1", 1, {opacity:0, y:30, ease: Power1.easeInOut } , "-=12.5")
+.from(".t2", 1, {opacity:0, y:30, ease: Power1.easeInOut } , "-=11.5")
+.from(".t3", 1, {opacity:0, y:30, ease: Power1.easeInOut } , "-=10.5")
+.from(".t4", 1, {opacity:0, y:30, ease: Power1.easeInOut } , "-=9.5")
+   
+.addLabel("end")
+</script>
+
+<script type="text/javascript">
+  var qparams=function(){var r=window.location.search.substr(1).split("&"),o={};if(""==r)return{};for(var n=0;n<r.length;++n){var t=r[n].split("=");2==t.length&&(o[t[0]]=decodeURIComponent(t[1].replace(/\+/g," ")))}return o}();
+  _sa_clicker = document.createElement('div');
+  _sa_clicker.setAttribute("style","position:absolute;display:block;left:0;top:0;width:100%;height:100%;z-index:1000000;cursor:pointer;");
+  document.getElementsByTagName('body')[0].appendChild(_sa_clicker);
+  _sa_clicker.onclick = function(){
+   window.open(qparams.click_url, "_blank");
+   window.parent.postMessage("remove" + qparams.banner_id , "*");
+  };
+ </script>
+
+</body>
+</html>

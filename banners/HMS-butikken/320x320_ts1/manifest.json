@@ -1,0 +1,9 @@
+{
+  "title": "Arbeidsmiljøsenteret",
+  "width": 300,
+  "height": 250,
+  "source": "index.html",
+  "clicktags": {
+    "clickTAG": "https://example.com"
+  }
+}

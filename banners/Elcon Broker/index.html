@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+<title>Example name</title>
+
+
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+
+
+<style type="text/css">
+body , html {width:100%;margin:0;padding:0;}
+#banner {width:336px;height:280px;position:relative;overflow:hidden;cursor:pointer; background:#000;}
+.img {position:absolute; left:0; top:0;}
+
+.box {
+	border:solid 1px #DEDEDE;
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+</style>
+
+
+</head>
+
+
+<div id="banner">
+
+
+<img class="img bg1" src="assets/bg1.jpg" />
+<img class="img bg" src="assets/bg.jpg" />
+<img class="img bt" src="assets/bt.png" />
+<img class="img t" src="assets/t.png" />
+
+<img class="img t1" src="assets/t1.png" />
+
+<img class="img logo" src="assets/logo.png" />
+<div class="img box"></div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded",function(e){
+	
+var tl=new TimelineMax({delay:-1,onComplete:function(){this.tweenFromTo("start","end")}});
+
+tl
+
+
+.addLabel("start")
+
+
+.from (".bg", 0.5, {ease: Power1.easeOut }  , 0.5)
+.to (".bg", 0.5, {autoAlpha:0, x:100, ease: Power1.easeOut }  , 5)
+.from (".bg1", 0.5, {autoAlpha:0, x:-100, ease: Power1.easeOut }  , 3)
+.to (".bg1", 0.5, { ease: Power1.easeOut,onComplete:function(){tl.restart()}} , 7.8)
+.from (".t", 0.5, {x:-30, autoAlpha:0, ease: Power1.easeOut }  , 1)
+.to (".t", 0.5, {x:-30, autoAlpha:0, ease: Power1.easeOut }  , 4.5)
+.from (".t1", 0.5, {x:-60, autoAlpha:0, ease: Power1.easeOut }  , 5.5)
+.to (".t1", 0.5, {x:-60, autoAlpha:0, ease: Power1.easeOut }  , 7.8)
+
+.from(".bt", 0.5, {scale:1, autoAlpha:0, x:-100, y:0, ease: Power1.easeOut }  , 1.3)
+.to(".bt", 0.5, {scale:0.9, ease: Power1.easeOut }  , 5)
+.to(".bt", 0.5, {scale:1, ease: Power1.easeOut }  , 5.3)
+
+.to(".bt", 0.5, {autoAlpha:0, y:0, ease: Power1.easeOut }  , 7.8)
+
+
+.addLabel("end")
+
+
+
+console.log("duration is: " + tl.duration())});
+ 
+ 
+
+</script>
+
+
+
+<script type="text/javascript">
+  html5.ready(function() {
+    document.getElementById("banner").onclick = function() {
+      window.open(html5.getClickTag(), "_blank");
+    }
+  });
+</script>
+</body>
+</html>

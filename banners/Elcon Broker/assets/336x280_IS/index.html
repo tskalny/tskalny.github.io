@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+<script src='https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js'></script>
+
+<title>Elcon broker</title>
+
+
+<style type="text/css">
+.reset{margin:0; padding:0}
+
+
+#banner{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left:0;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.banner_size{
+	width: 336px;
+	height: 280px;
+
+}
+
+.box {
+	border:solid 1px #DEDEDE;
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.img{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+
+.cta {
+	background-image:url("assets/cta_over.png");
+	background-repeat:no-repeat;
+	
+}
+
+.cta img{-webkit-transition: opacity 0.4s ease 0s;
+-moz-transition: opacity 0.4s ease 0s;
+-o-transition: opacity 0.4s ease 0s;
+transition: opacity 0.4s ease 0s;}
+
+#banner:hover  .cta img {opacity:0;}
+
+
+
+
+
+/*********************/
+
+
+
+</style>
+</head>
+<body class="reset">
+
+<div id="banner" class="banner_size">
+<div class="img p1"><img src="assets/p1.jpg"></div>
+<div class="img p2"><img src="assets/p2.jpg"></div>
+
+<div class="img t1"><img src="assets/t1.png"></div>
+<div class="img t2"><img src="assets/t2.png"></div>
+<div class="img logo"><img src="assets/logo.png"></div>
+<div class="img cta"><img src="assets/cta.png"></div>
+
+<div class="img box"></div>
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+var tl=new TimelineMax();
+
+
+//frame1
+
+tl
+  .from(".t1", 1, { opacity:0, y:-30, ease:Back.easeInOut},0)
+  .from(".t2", 1, { opacity:0, y:-20, ease:Back.easeInOut},3)
+  .from(".p2", 1, { opacity:0,  ease:Power3.easeInOut},3)
+  .to(".cta", 0.12, {y:2, yoyo:true, repeat:7},4)
+
+  .to(".t2", 1, { opacity:0, y:50, ease:Back.easeInOut},7)
+  .to(".p2", 1, { opacity:0,  ease:Power3.easeInOut},8)
+  .to(".t1", 1, { opacity:0, y:50, ease:Back.easeInOut,onComplete:function(){tl.restart()}},8)
+
+</script>
+
+
+</script> 
+
+
+</body>
+</html>

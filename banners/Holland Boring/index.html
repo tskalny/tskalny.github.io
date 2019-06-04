@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+		<script src='https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js'></script>
+		<title>Holland Boring</title>
+		<style type="text/css">
+			.reset{margin:0; padding:0}
+			#banner{
+				position: absolute;
+				overflow: hidden;
+				top: 0;
+				left:0;
+				background-color: #fff;
+				cursor: pointer;
+			}
+			.banner_size{
+				width: 320px;
+				height: 320px;
+			}
+			.border {
+				border:solid 1px #d6d6d6;
+				width: 100%;
+				height: 100%;
+				-moz-box-sizing: border-box;
+			    box-sizing: border-box;
+			 	z-index: 100;
+			}
+			img {
+  			width: 100%;
+  			height:	100%;
+			}
+			.img {position:absolute;}
+		</style>
+	</head>
+	<body class="reset">
+		<a id="click" target="_blank">
+			<div id="banner" class="banner_size">
+        <div class="img bg1"><img src="assets/bg1.jpg"></div>
+         <div class="img bg2"><img src="assets/bg2.jpg"></div>
+        <div class="img logo"><img src="assets/logo.png"></div>
+        <div class="img pl"><img src="assets/pl.png"></div>
+        <div class="img t"><img src="assets/t.png"></div>
+				<div class="img bt"><img src="assets/bt.png"></div>
+		    <div class="img border"></div>
+			</div>
+		</a>
+	<script>
+		var tl=new TimelineMax({delay:-1,onComplete:function(){this.tweenFromTo("start","end")}});
+		TweenMax.set('.bt-h',{autoAlpha:0});
+		tl
+		.addLabel("start")
+			.from(".bg2", 2.5, {scale:1.05, ease:Power4.easeInOut}, 0)
+			.from(".pl", 1.5, {y:100, ease:Power4.easeInOut}, 0.5)
+      .from(".t", 1.5, {opacity:0, y:10, ease:Power4.easeInOut}, 0.6)
+			.to(".bg2", 1.5, {scale:1.05, ease:Power4.easeInOut}, 5)
+			.to(".pl", 1.5, {y:100, ease:Power4.easeInOut}, 5)
+			.to(".t", 1.5, {y:100, ease:Power4.easeInOut}, 5)
+			.from(".bt", 1.5, {opacity:0, y:10, ease:Power1.easeOut}, 5.5)
+			.to(".bt", 1, {scale:1.1, ease:Power1.easeOut}, {scale:1.1, yoyo:true, repeat:2, ease:Power1.easeOut}, 5)
+	  .addLabel("end")
+			.to([".t", ".bg1", ".bt"], 1.5, {opaicty:-40, ease:Power4.easeInOut}, 10)
+	</script>
+	</body>
+</html>
