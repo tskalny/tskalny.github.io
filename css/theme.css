@@ -23,9 +23,3 @@ footer hr {
 footer a, footer a:active, footer a:focus{
 	color:#fff;
 }
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-
