@@ -1,0 +1,25 @@
+/*! 
+* Theme's Stylesheet - Modify/Add your own stylesheet + Your Copyright 
+*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic);
+
+body,input,select,textarea {
+	color:#6e6e6e;
+	font-family:'Roboto',sans-serif;
+	font-size:16px;
+	font-weight:300;
+	line-height: 1.6;
+}
+footer {
+	background-color:#222;
+	color:#999;
+	margin-top:50px;
+	padding:50px 0;
+	font-size:15px;
+}
+footer hr {
+	border-top:1px solid #444;
+}
+footer a, footer a:active, footer a:focus{
+	color:#fff;
+}
