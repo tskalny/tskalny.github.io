@@ -1,0 +1,9 @@
+html class=gr__htmlbook_ruhead
+  meta http-equiv=Content-Type content=texthtml; charset=utf-8
+  titleФреймыtitle
+ head
+ frameset cols=100, data-gr-c-s-loaded=true
+  frame src=menu2.html name=MENU
+  frame src=content.html name=CONTENT
+ frameset
+html

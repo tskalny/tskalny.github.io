@@ -220,11 +220,7 @@ hr {
 		width:95%;
 	}
 }
-@media (min-width:1200px) {
-	.container {
-		width:1170px;
-	}
-}
+
 .container-fluid {
 	margin-right:auto;
 	margin-left:auto;
@@ -543,7 +539,7 @@ hr {
 	}
 	.header-wrapper header {
 		width:100%;
-		padding:0px 7.5%;
+		padding:0px 4%;
 		margin:0px auto;
 	}
 	.header-wrapper header .logo {
@@ -618,9 +614,12 @@ hr {
 }
 @media (max-width:992px) {
 	.logo {
-		line-height:59px;
+		font-size: 17px;
+		float: left;
+		line-height:57px;
 		display:inline-block;
-		margin-left:10px;
+		margin: 0px 0px 0px;
+		letter-spacing: 1px
 		color:#333;
 	}
 	.nav-collapse ul {
@@ -645,6 +644,13 @@ hr {
 		content:'-';
 		margin-right:5px;
 	}
+	@media (min-width: 992px){
+    .sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 40px 0 0 0;
+}
+
 	.js .nav-collapse {
 		clip:rect(0 0 0 0);
 		max-height:0;
