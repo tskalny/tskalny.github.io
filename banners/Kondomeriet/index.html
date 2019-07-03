@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta name='viewport' content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width'/>
+<title>Citystock</title>
+
+<script>document.write('<script src="'+ (window.API_URL || 'https://s1.adform.net/banners/scripts/rmb/Adform.DHTML.js?bv='+ Math.random()) +'"><\/script>');</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+
+<style type='text/css'>
+html{align-items:center; display:flex; height:100%; width:100%; }
+.reset{margin:0; padding:0; margin-left:auto; margin-right:auto;}
+
+
+#banner{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left:0;
+	background-color: #fff;
+	cursor: pointer;
+
+}
+
+.banner_size{
+	width: 300px;
+	height: 250px;
+
+}
+
+
+.box {
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+ 	z-index: 100;
+ 	  border: 1px solid #000; 
+
+}
+
+.img{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	-ms-transform: rotate(0.01deg); /* IE 9 */
+    -webkit-transform: rotate(0.01deg); /* Chrome, Safari, Opera */
+    transform: rotate(0.01deg);
+}
+.img img{
+	-ms-transform: rotate(-0.01deg); /* IE 9 */
+    -webkit-transform: rotate(-0.01deg); /* Chrome, Safari, Opera */
+    transform: rotate(-0.01deg);
+     backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -webkit-crisp-edges;
+    will-change:transform;
+}
+
+
+</style>
+</head>
+<body class="reset">
+
+
+
+
+<div id="banner" class="banner_size">
+
+<div class="img bg"><img src="assets/bg.jpg"></div>
+<div class="img pl1"><img src="assets/pl1.png"></div>
+<div class="img pr"><img src="assets/pr.png"></div>
+
+<div class="img t1"><img src="assets/t1.png"></div>
+<div class="img pl"><img src="assets/pl.png"></div>
+<div class="img box"></div>
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+var tl=new TimelineMax({repeat:-1});
+TweenMax.set(".pl", {transformOrigin:"76px 191px"});
+tl
+
+.from('.pl1', 4, {scale:1.1, ease:Power0.easeNone}, 0)
+.from('.t', 0.5, {opacity:0, ease:Power0.ease}, 1.6)
+.from('.pl', 0.5, {rotation:-40, scale:0, ease:Back.ease}, 1)
+.to('.pl', 0.5, {rotation:-10, ease:Power0.ease}, 2)
+.to('.pl', 0.5, {rotation:-0, ease:Back.ease}, 2.2)
+
+.to('.pl1', 4, {scale:1.1, ease:Power0.easeNone}, 4)
+.to('.t', 1, {opacity:0, ease:Power0.ease}, 7)
+.to('.pl', 0.4, {rotation:-40, scale:0, ease:Back.ease}, 7)
+
+</script>
+
+<script>
+ var clickArea = document.getElementById('banner');
+
+ clickTAGvalue = dhtml.getVar('clickTAG', 'http://www.example.com');
+ landingpagetarget = dhtml.getVar('landingPageTarget', '_blank');
+
+ clickArea.onclick = function() {
+ window.open(clickTAGvalue,landingpagetarget);
+ }
+</script>
+
+
+
+</body>
+</html>
