@@ -17,10 +17,12 @@ body,input,select,textarea {
 
 nav ul li a {
 	text-transform: uppercase;
+	list-style: none;
 }
 
 nav ul ul li a {
 	text-transform: capitalize;
+	list-style: none;
 }
 
 footer .container {
@@ -92,6 +94,5 @@ footer {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 50px;
     width: 100%;
 }

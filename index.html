@@ -24,6 +24,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
+
+
 <body class="stickybody">
 <!-- HEADER -->
 <div class="header-wrapper sticky">
@@ -43,7 +46,9 @@
 	</nav>-->
 	</header>
 </div>
-<!-- HEADER -->
+
+
+
 
 
 <!-- SITE CONTENT -->
@@ -51,122 +56,189 @@
 
 <div class="container">
 
-	<div class="row">
+<div class="row">
 
 <div id="sidebar" class="c3">
-<a href="#" class="nav-toggle" aria-hidden="true">Menu</a>
+
+
+
+
 <nav class="nav-collapse nav-collapse-0 closed" aria-hidden="false" style="transition: max-height 284ms ease 0s; position: relative;">
+
+
+
+
+<script>
+	document.addEventListener("DOMContentLoaded", fillBttnToUrl);
+  var iframeH = '1400px';
+  var iframeW = '1400px';
+  var bttnToUrl = {};
+	var lastClickedBttnIHTML = false;
+
+	function fillBttnToUrl()
+  {
+  	var bttns = document.getElementsByClassName('bttnsToClick');
+    for (var i = 0; i < bttns.length; i++)
+    		bttnToUrl[bttns[i].getAttribute('key')] = bttns[i].getAttribute('url');
+	}
+
+  function bannerManager(clickedEl)
+  {
+    var key = clickedEl.innerHTML;
+    if (lastClickedBttnIHTML != key)
+    {
+      changeIframeSrc(bttnToUrl[key]);
+      lastClickedBttnIHTML = key;
+    }
+    else
+    {
+      hideShowIframe();
+    }
+    return false;
+  }
+
+  function changeIframeSrc(src)
+  {
+    ifrm.style.visibility = 'visible';
+    ifrm.style.width = iframeW;
+    ifrm.style.height = iframeH;
+    
+    ifrm.setAttribute('src', src);
+  }
+
+  function hideShowIframe()
+  {
+    if (ifrm.style.visibility == 'visible')
+    {
+      ifrm.style.visibility = 'hidden';
+      ifrm.style.width = '0px';
+      ifrm.style.height = '0px';         
+    }
+    else
+    {
+      ifrm.style.visibility = 'visible';
+      ifrm.style.width = iframeW;
+      ifrm.style.height = iframeH;      
+    }
+
+  }
+
+</script>
+
+
+
+
+
 <ul>
-
-
-
-<li>HTML5 banners</li>
+<li > HTML5 banners</li>
 <ul>
-
-
-<li>
-<a href="https://tskalny.github.io/banners/endorepair/" traget="iframe_a">Endorepair</a>
-</li>
-<li>
-<a href="https://tskalny.github.io/banners/Rahoitu/" traget="iframe_a">Rahoitu</a>
-</li>
-<li>
-<a href="https://tskalny.github.io/banners/Nyk%C3%B6pings_GK_banner/" traget="iframe_a">Nyköpings_GK_banner</a>
+ <li>
+	<a class='bttnsToClick' href="#" key='Endorepair' url='https://tskalny.github.io/banners/endorepair/' onclick="return bannerManager(this)">Endorepair</a>
+ </li>
+ <li>
+	<a class='bttnsToClick' href="#" key='Rahoitu' url='https://tskalny.github.io/banners/Rahoitu/' onclick="return bannerManager(this)">Rahoitu</a>
+ </li>
+ <li>
+	<a class='bttnsToClick' href="#" key='Nyköpings_GK_banner' url='https://tskalny.github.io/banners/Nyk%C3%B6pings_GK_banner/' onclick="return bannerManager(this)">Nyköpings_GK_banner</a>
+ </li>	
+ <li>
+	<a class='bttnsToClick' href="#" key='Mercury/3' url='https://tskalny.github.io/banners/Mercury/320x250_ts_3/' onclick="return bannerManager(this)">Mercury/3</a>
+ </li>	
+ <li>
+	<a class='bttnsToClick' href="#" key='Mercury/2' url='https://tskalny.github.io/banners/Mercury/320x250_ts_2/' onclick="return bannerManager(this)">Mercury/2</a>
+ </li>	
+ <li>
+<a class='bttnsToClick' href="#" key='Mercury/1' url='https://tskalny.github.io/banners/Mercury/320x250_ts_1/' onclick="return bannerManager(this)">Mercury/1</a>
 </li>	
 <li>
-<a href="https://tskalny.github.io/banners/Mercury/320x250_ts_3/" traget="iframe_a">Mercury/3</a>
-</li>	
-<li>
-<a href="https://tskalny.github.io/banners/Mercury/320x250_ts_2/" traget="iframe_a">Mercury/2</a>
-</li>	
-<li>
-<a href="https://tskalny.github.io/banners/Mercury/320x250_ts_1/	" traget="iframe_a">Mercury/1</a>
-</li>	
-<li>
-<a href="https://tskalny.github.io/banners/Langseth_Services%EF%80%A8/" traget="iframe_a">Langseth_Services</a>
+<a class='bttnsToClick' href="#" key='Langseth_Services' url='https://tskalny.github.io/banners/Langseth_Services%EF%80%A8/' onclick="return bannerManager(this)">Langseth_Services</a>
 </li>		
 <li>
-<a href="https://tskalny.github.io/banners/Landeker/300x250/" traget="iframe_a">Landeker</a>
+<a class='bttnsToClick' href="#" key='Landeker' url='https://tskalny.github.io/banners/Landeker/300x250/' onclick="return bannerManager(this)">Landeker</a>
 </li>	
 <li>
-<a href="https://tskalny.github.io/banners/Holland_Boring/" traget="iframe_a">Holland_Boring</a>
+<a class='bttnsToClick' href="#" key='Holland_Boring' url='https://tskalny.github.io/banners/Holland_Boring/' onclick="return bannerManager(this)">Holland_Boring</a>
 </li>	
 <li>
-<a href="https://tskalny.github.io/banners/HMS-butikken/320x320_ts1/" traget="iframe_a">HMS-butikken</a>
+<a class='bttnsToClick' href="#" key='HMS-butikken' url='https://tskalny.github.io/banners/HMS-butikken/320x320_ts1/' onclick="return bannerManager(this)">HMS-butikken</a>
 </li>	
 <li>
-<a href="https://tskalny.github.io/banners/Ferner_Jacobsen/" traget="iframe_a">Ferner_Jacobsen</a>
+<a class='bttnsToClick' href="#" key='Ferner_Jacobsen' url='https://tskalny.github.io/banners/Ferner_Jacobsen/' onclick="return bannerManager(this)">Ferner_Jacobsen</a>
 </li>
 <li>
-<a href="https://tskalny.github.io/banners/Evidensia_Djursjukv%C3%A5rd/336x280/" traget="iframe_a">Evidensia_Djursjukvård</a>
+<a class='bttnsToClick' href="#" key='Evidensia_Djursjukvård' url='https://tskalny.github.io/banners/Evidensia_Djursjukv%C3%A5rd/336x280/' onclick="return bannerManager(this)">Evidensia_Djursjukvård</a>
 </li>	
 <li>
-<a href="https://tskalny.github.io/banners/Elcon_Broker/" traget="iframe_a">Elcon_Broker</a>
+<a class='bttnsToClick' href="#" key='Elcon_Broker' url='https://tskalny.github.io/banners/Elcon_Broker/' onclick="return bannerManager(this)">Elcon_Broker</a>
 </li>
 <li>
-<a href="https://tskalny.github.io/banners/Biotherm_Aquasource/300x250_2/" traget="iframe_a">Biotherm_Aquasource/2</a>
+<a class='bttnsToClick' href="#" key='Biotherm_Aquasource/2' url='https://tskalny.github.io/banners/Biotherm_Aquasource/300x250_2/' onclick="return bannerManager(this)">Biotherm_Aquasource/2</a>
 </li>
 <li>
-<a href="https://tskalny.github.io/banners/Biotherm_Aquasource/320x250_1/" traget="iframe_a">Biotherm_Aquasource/1</a>
+<a class='bttnsToClick' href="#" key='Biotherm_Aquasource/1' url='https://tskalny.github.io/banners/Biotherm_Aquasource/320x250_1/' onclick="return bannerManager(this)">Biotherm_Aquasource/1</a>
 </li>
 <li>
-<a href="https://tskalny.github.io/Banners/soulmate/" traget="iframe_a">Soulmate</a></li>
+<a class='bttnsToClick' href="#" key='Soulmate' url='https://tskalny.github.io/Banners/soulmate/' onclick="return bannerManager(this)">Soulmate</a></li>
 <li>
-<a href="https://tskalny.github.io/Banners/Vendemore/3/" traget="iframe_a">Vendemore/3</a>
+<a class='bttnsToClick' href="#" key='Vendemore/3' url='https://tskalny.github.io/Banners/Vendemore/3/' onclick="return bannerManager(this)">Vendemore/3</a>
 </li>
 <li>
-<a href="https://tskalny.github.io/Banners/Vendemore/2/" traget="iframe_a">Vendemore/2</a></li>
+<a class='bttnsToClick' href="#" key='Vendemore/2' url='https://tskalny.github.io/Banners/Vendemore/2/' onclick="return bannerManager(this)">Vendemore/2</a></li>
 <li>
-<a href="https://tskalny.github.io/Banners/Vendemore/1/" traget="iframe_a">Vendemore/1</a></li>
+<a class='bttnsToClick' href="#" key='Vendemore/1' url='https://tskalny.github.io/Banners/Vendemore/1/' onclick="return bannerManager(this)">Vendemore/1</a></li>
 <li>
-<a href="https://tskalny.github.io/Banners/Synslaser/" traget="iframe_a">Synslaser</a></li>
+<a class='bttnsToClick' href="#" key='Synslaser' url='https://tskalny.github.io/Banners/Synslaser/' onclick="return bannerManager(this)">Synslaser</a></li>
 <li>
-<a href="https://tskalny.github.io/Banners/Regnskapshuset/" traget="iframe_a">Regnskapshuset</a></li>
+<a class='bttnsToClick' href="#" key='Regnskapshuset' url='https://tskalny.github.io/Banners/Regnskapshuset/' onclick="return bannerManager(this)">Regnskapshuset</a></li>
 <li>
-<a href="https://tskalny.github.io/Banners/Revisorkollegiet/" traget="iframe_a">Revisorkollegiet</a></li>
+<a class='bttnsToClick' href="#" key='Revisorkollegiet' url='https://tskalny.github.io/Banners/Revisorkollegiet/' onclick="return bannerManager(this)">Revisorkollegiet</a></li>
 <li>
-<a href="https://tskalny.github.io/banners/Oxivisuals/3/" traget="iframe_a">Oxivisuals/3</a></li>
+<a class='bttnsToClick' href="#" key='Oxivisuals/3' url='https://tskalny.github.io/banners/Oxivisuals/3/' onclick="return bannerManager(this)">Oxivisuals/3</a></li>
 <li>
-<a href="https://tskalny.github.io/Banners/Oxivisuals/2/" traget="iframe_a">Oxivisuals/2</a></li>
+<a class='bttnsToClick' href="#" key='Oxivisuals/2' url='https://tskalny.github.io/Banners/Oxivisuals/2/' onclick="return bannerManager(this)">Oxivisuals/2</a></li>
 <li>
-<a href="https://tskalny.github.io/Banners/Oxivisuals/1/" traget="iframe_a">Oxivisuals/1</a></li>
+<a class='bttnsToClick' href="#" key='Oxivisuals/1' url='https://tskalny.github.io/Banners/Oxivisuals/1/' onclick="return bannerManager(this)">Oxivisuals/1</a></li>
 <li>
-<a href="https://tskalny.github.io/Banners/KOB/" traget="iframe_a">KOB</a></li>
+<a class='bttnsToClick' href="#" key='KOB' url='https://tskalny.github.io/Banners/KOB/' onclick="return bannerManager(this)">KOB</a></li>
 <li>
-<a href="https://tskalny.github.io/banners/Banner_Media_Menu/">MediaMenu</a></li>
+<a class='bttnsToClick' href="#" key='MediaMenu' url='https://tskalny.github.io/banners/Banner_Media_Menu/' onclick="return bannerManager(this)">MediaMenu</a></li>
 </ul>
+
 
 <li>Wed site</li>
 <ul>
-<li>
-<a href="https://tskalny.github.io/web/enlight_research/draft_ts.jpg" traget="iframe_a">Enlight_research</a>
-</li>
-	
+ <li>
+	<a class='bttnsToClick' href="#" key='Enlight_research_web' url='https://tskalny.github.io/web/enlight_research/draft_ts.jpg'  onclick="return bannerManager(this)">Enlight_research_web</a>
+ </li>
 </ul>
+
 
 <li>Static Banners</li>
 <ul>
-<li>
-<a href="https://tskalny.github.io/Banners/KOB/" traget="iframe_a">KOB</a>
-</li>
-
-
+ <li>
+ 	<a class='bttnsToClick' href="#" key='KOB' url='https://tskalny.github.io/web/enlight_research/draft_ts.jpg' onclick="return bannerManager(this)">xxx</a>
+ </li>
 </ul>
+
 
 <li>Logo</li>
 <ul>
-
-<li>
-<a href="https://tskalny.github.io/logo/enlight_research/logo8-06.png" traget="iframe_a">Enlight_research</a>
-</li>
-<li>
-<a href="https://tskalny.github.io/logo/fresh_offers/fresh_offers_ts.jpg" traget="iframe_a">fresh_offers</a>
-</li>
-<li>
-<a href="https://tskalny.github.io/logo/sansen/ts-04.jpg" traget="iframe_a">Sansen</a>
-</li>	
-
+ <li>
+	<a class='bttnsToClick' href="#" key='Enlight_research_log' url='https://tskalny.github.io/logo/enlight_research/logo8-06.png' onclick="return bannerManager(this)">Enlight_research_logo</a>
+ </li>
+ <li>
+	<a class='bttnsToClick' href="#" key='Fresh_offers' url='https://tskalny.github.io/logo/fresh_offers/fresh_offers_ts.jpg' onclick="return bannerManager(this)">Fresh_offers</a>
+ </li>
+ <li>
+	<a class='bttnsToClick' href="#" key='Sansen' url='https://tskalny.github.io/logo/sansen/ts-04.jpg' onclick="return bannerManager(this)">Sansen</a>
+ </li>
+ <li>
+ 	<a class='bttnsToClick' href="#" key='Molodist' url='https://tskalny.github.io/logo/molodist/logo_molodist-06.jpg' onclick="return bannerManager(this)">Molodist</a>
+	
+ </li>	
 </ul>
+
+
 
 <li>Animarion icon</li>
 <ul>
@@ -183,31 +255,15 @@
 							</div>
 	</div>
 	<div id="content" class="c9"> <br/>
-	<h2># UMM..WHAT IS THIS?</h2>
-
-	
-<input type="button" onclick="document.getElementById('id_1')" .src='https://tskalny.github.io/banners/Banner_Media_Menu/'>
-<BR>
-<IFRAME id="id_1" SRC="https://tskalny.github.io/banners/Banner_Media_Menu/" FRAMEBORDER=0 VSPACE=0 HSPACE=0 WIDTH=668 HEIGHT=360 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING="no"></IFRAME>
-</BODY>
-</HTML>
-
-
-
-
+		
 	<div id="page-content">
 		<div id="page-text">
-	<p>
-		 A very basic and lightweight CSS framework built for developers. <i>You love Bootstrap's grid but you waste a lot of time to remove or modify all of the other classes every time you create a new template?</i> <b>EVRIKA!</b> This one's for you!
-	</p>
-	<h2>And...what's so special?</h2>
-	<p>
-		 You're right, there are a lot out there. But we REALLY do know what you're looking for. A fast lightweight framework packed with essential starter elements ONLY : a basic grid, basic buttons, basic menu, all responsive, Font Awesome integration, Google Font integration and the rest is on you! But even with this basic elements, this page still looks clean & modern, right?
-	</p>
-	<h2>Is it FREE?</h2>
-	<p>
-		Yes, of course! This is our way of giving something back to the design & development community. But if you want to <a href="#">buy us a coffee</a>, we would appreciate it a lot!
-	</p>
+
+			<iframe onload="resizeIframe(this)" FRAMEBORDER=0 id='ifrm' visibility='hidden' width='0' height='0'></iframe>
+
+	
+	
+	
 	<h2>Ok, ok, how do I start?</h2>
 	<p>
 		 Download this zip file to get WOW CSS Framework. Included files: CSS, HTML, JS. You will have two starter templates, one that looks almost like this demo and another one, blank. So...get ready to build your awesome template and come back to show us your work! :)
@@ -251,98 +307,6 @@
 			</p>
 		</div>
 	</div>
-	<div class="row">
-		<div class="c3">
-			<h3>c3</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			</p>
-		</div>
-		<div class="c3">
-			<h3>c3</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			</p>
-		</div>
-		<div class="c3">
-			<h3>c3</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			</p>
-		</div>
-		<div class="c3">
-			<h3>c3</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="c2">
-			<h3>c2</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consectetur.
-			</p>
-		</div>
-		<div class="c2">
-			<h3>c2</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consect.
-			</p>
-		</div>
-		<div class="c2">
-			<h3>c2</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consecte.
-			</p>
-		</div>
-		<div class="c2">
-			<h3>c2</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consec.
-			</p>
-		</div>
-		<div class="c2">
-			<h3>c2</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consect.
-			</p>
-		</div>
-		<div class="c2">
-			<h3>c2</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consect.
-			</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="c4">
-			<h3>c4</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla quam maximus aliquet.
-			</p>
-		</div>
-		<div class="c8">
-			<h3>c8</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla quam maximus aliquet molestie.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla quam maximus.
-			</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="c8">
-			<h3>c8</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla quam maximus aliquet molestie.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla quam maximus.
-			</p>
-		</div>
-		<div class="c4">
-			<h3>c4</h3>
-			<p>
-				 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla quam maximus aliquet.
-			</p>
-		</div>
-	</div>
 	</div>
 	</div>
 	<br/>
@@ -351,7 +315,7 @@
 
 	
 	<!-- buttons -->
-	<h2># THE BUTTONS</h2>
+	<!--<h2># THE BUTTONS</h2>
 	<a href="#" class="button">Button</a>
 	<a href="#" class="button orange">Button</a>
 	<a href="#" class="button yellow">Button</a>
@@ -363,7 +327,7 @@
 	<a href="#" class="button yellow simple">Button</a>
 	<a href="#" class="button blue simple">Button</a>
 	<a href="#" class="button green simple">Button</a>
-	
+	-->
 	
 </div>
 <!-- SITE CONTENT -->
@@ -372,12 +336,8 @@
 <!-- FOOTER -->
 <footer class="text-center">
 <div class="container">
-	 &nbsp; <a target="_blank" href="https://www.facebook.com/taras.skalny"><i class="fa fa-facebook fa-2x"></i></a> &nbsp; <a target="_blank" href="https://plus.google.com/b/110916582192388695332/+WowthemesNet/posts"><i class="fa fa-google-plus fa-2x"></i></a>
-	<hr>
-	 &copy; 2015 Copyright <a target="_blank" href="http://www.wowthemes.net/premium-themes-templates/">WowThemes.net</a>. <br/>
-	<i>Wow CSS Framework</i> uses MIT license.<br/>
-	<a target="_blank" href="http://www.wowthemes.net/category/free-themes-templates/">Free Themes</a> | <a target="_blank" href="http://www.wowthemes.net/premium-themes-templates/">Premium Themes</a>
-</div>
+	 &copy; 2019 Taras S.<br/>
+	</div>
 </footer>
 <!-- FOOTER -->
 
