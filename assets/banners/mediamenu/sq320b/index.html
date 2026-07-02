@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="ad.size" content="width=320, height=320">
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+    <script type="text/javascript">
+        var clickTag = "https://elpaoland.se/";
+    </script>
+    <title>Banner</title>
+
+
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+
+<style type="text/css">
+
+html{align-items:center; display:flex; height:100%; width:100%; }
+
+body{margin:0; padding:0; margin-left:auto; margin-right:auto;}
+
+
+
+.main-container{
+
+	position: relative;
+
+	width: 320px;
+
+	height: 320px;
+
+	overflow: hidden;
+
+	background-color: #000000;
+
+	cursor: pointer;
+
+	opacity: 0;
+
+}
+
+
+
+.img{
+
+	position: absolute;
+
+	left: 0px;
+
+	top: 0px;
+
+	width: 100%;
+
+	height: 100%;
+
+	-ms-transform: rotate(0.01deg); /* IE 9 */
+
+    -webkit-transform: rotate(0.01deg); /* Chrome, Safari, Opera */
+
+    transform: rotate(0.01deg);
+
+    background-repeat: no-repeat;
+
+    background-size: contain;
+
+}
+
+
+
+.img img{
+
+	position: absolute;
+
+	left: 0px;
+
+	top: 0px;
+
+	height: 100%;
+
+	-ms-transform: rotate(-0.01deg); /* IE 9 */
+
+    -webkit-transform: rotate(-0.01deg); /* Chrome, Safari, Opera */
+
+    transform: rotate(-0.01deg);
+
+     backface-visibility: hidden;
+
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transform-style: preserve-3d;
+
+	-ms-transform-style: preserve-3d;
+
+	-o-transform-style: preserve-3d;
+
+	transform-style: preserve-3d;
+
+    image-rendering: -webkit-optimize-contrast;
+
+    image-rendering: -webkit-crisp-edges;
+
+    will-change:transform;
+
+}
+
+
+
+.border{
+
+	position: absolute;
+
+	width: 100%;
+
+	height: 100%;
+
+	border: 1px solid #cccccc;
+
+	-webkit-box-sizing: border-box;
+
+	-moz-box-sizing: border-box;
+
+	box-sizing: border-box;
+
+}
+
+
+
+.pl{
+
+	position: absolute;
+
+	left: 0px;
+
+	top: 0px;
+
+	height: 100%;
+
+}
+.el1{
+
+position: absolute;
+
+left: 80px;
+
+top: 50px;
+
+height: 35%;
+mix-blend-mode: Overlay;
+opacity: 50%;
+
+}
+.el2{
+
+position: absolute;
+mix-blend-mode: darken
+;
+
+left: 0px;
+
+top: 0px;
+
+height: 100%;
+
+}
+
+.filtr{
+  opacity: 1;
+  mix-blend-mode: Color-Burn
+;
+ }
+
+
+</style>
+
+</head>
+
+<body>
+
+<a href="javascript:window.open(window.clickTag)">
+
+<div class="main-container" id="banner">
+	<div class="img bg3"><img src="bg3.jpg"></div>
+<div class="img bg2"><img src="bg2.jpg"></div>
+<div class="img bg1"><img src="bg1.jpg"></div>
+
+<div class="img pl"><img src="pl.png"></div>
+<div class="img el2"><img src="el2.png"></div>
+<div class="img el1"><img src="el1.png"></div>
+
+<div class="img logo"><img src="logo.png"></div>
+<div class="img t1"><img src="t1.png"></div>
+<div class="img t2"><img src="t2.png"></div>
+<div class="img dot1"><img src="dot1.png"></div>
+<div class="img t2-1"><img src="t2-1.png"></div>
+<div class="img dot2"><img src="dot2.png"></div>
+<div class="img t2-2"><img src="t2-2.png"></div>
+<div class="img dot3"><img src="dot3.png"></div>
+<div class="img t2-3"><img src="t2-3.png"></div>
+<div class="img dot4"><img src="dot4.png"></div>
+<div class="img t2-4"><img src="t2-4.png"></div>
+<div class="img dot5"><img src="dot5.png"></div>
+<div class="img t2-5"><img src="t2-5.png"></div>
+
+
+<div class="img bt"><img src="bt.png"></div>
+<div class="img arrow"><img src="arrow.png"></div>
+
+
+
+
+<div class="border"></div>
+
+</div>
+</a>
+
+
+
+<script>
+
+gsap.set(".main-container", {autoAlpha:1});
+
+var bannerWidth = document.querySelector("#banner").offsetWidth;
+
+var bannerHeight = document.querySelector("#banner").offsetHeight;
+
+var loops = 1;
+
+gsap.set(".el1", {filter: "brightness(1)", transformOrigin:"50px 79px"});
+
+
+
+var tl=new TimelineMax({repeat:1,delay:0,onComplete:function(){this.tweenFromTo("start","end")}});
+
+
+
+tl .addLabel("start")
+
+.from(".el2", 0.8, { scale:0.0, ease:"power2.inOut"},0.0)
+.from(".el1", 0.8, { scale:0.0, ease:"power2.inOut"},0.3)
+.from(".t1", 0.8, {autoAlpha:0,  y:5,  ease:"power2.inOut"},0.0)
+.to(".t1", 0.8, {autoAlpha:0,  y:5,  ease:"power2.inOut"},6.5)
+.to(".el1", 0.8, {  y:50, x:50, ease:"power2.inOut"},4.0)
+.from(".t2", 0.8, {autoAlpha:0, y:5,  ease:"power2.inOut"},7.0)
+.from(".dot1, .t2-1, .dot2, .t2-2, .dot3, .t2-3, .dot4, .t2-4, .dot5, .t2-5, .dot6, .t2-6", 0.8, {autoAlpha:0, y:5, stagger:{each:0.2},  
+ease:"power2.inOut"},7.5)
+.from(".bt, .arrow", 0.8, {autoAlpha:0, x:-10, stagger:{each:0.2},   ease:"power2.inOut"},0.3)
+
+.to(".bg1", 0.8, { scale:1.1, ease:"power2.inOut"},0.0)
+.to(".bg1", 0.5, { autoAlpha:0, ease:"power2.inOut"},3.0)
+.to(".bg2", 0.8, { scale:1.1, ease:"power2.inOut"},4.0)
+.to(".bg2", 0.5, { autoAlpha:0,  ease:"power2.inOut"},7.0)
+.to(".bg3", 0.8, { scale:1.1, ease:"power2.inOut"},7.0)
+
+
+.addLabel("end")
+
+
+.to(".el1, .el2", 0.6, {scale:0.0,  stagger:{each:0.2},  ease:"power2.inOut"},6.5)
+.to(".bt", 0.6, { ease:"power2.inOut"},13.0)
+
+
+
+
+</script>
+
+</body>
+
+</html>

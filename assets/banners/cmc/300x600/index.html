@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+<title>Banner</title>
+<meta name="ad.size" content="width=300,height=600">
+<script type="text/javascript">
+    var clickTag = "https://www.cmcmarkets.com/en-au/lp/group"; 
+</script>
+<script src='fontdetect.min.js'></script>
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+<style type="text/css">
+html {align-items: center;display: flex;height: 100%;width: 100%;}
+body {margin: 0;padding: 0;margin-left: auto;margin-right: auto;}
+
+@font-face {
+    font-family: 'NeueHaasDisplayRoman';
+    src: url('NeueHaasDisplayRoman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+#banner{
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background-color: #10162B;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    border-radius: 0px;
+}
+.img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.img img{
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -webkit-crisp-edges;
+    will-change: transform;
+}
+.copy1{
+    position: absolute;
+    left: 52px;
+    top: 48px;
+    height: 197px;
+    width: 228px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: top;
+    align-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+
+    font-family: 'NeueHaasDisplayRoman', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 45px;
+    line-height: 90%;
+    color: #FFFFFF;
+    /*border:1px solid #ffffff;*/
+}
+.copy2{
+    position: absolute;
+    left: 52px;
+    top: 48px;
+    height: 197px;
+    width: 243px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: top;
+    align-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+
+    font-family: 'NeueHaasDisplayRoman', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 45px;
+    line-height: 90%;
+    color: #FFFFFF;
+    /*border:1px solid #ffffff;*/
+}
+.copy3{
+    position: absolute;
+    left: 0px;
+    top: 51px;
+    width: 100%;
+    height: 95px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: top;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    font-family: 'NeueHaasDisplayRoman', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 100%;
+    color: #ffffff;
+    /*border:1px solid #ffffff;*/
+}
+.copy4{
+    position: absolute;
+    left: 34px;
+    top: 321px;
+    height: 33px;
+    width: 237px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: top;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+
+    font-family: 'NeueHaasDisplayRoman', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 110%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.cta{
+    position: absolute;
+    left: 88px;
+    top: 368px;
+    width: 125px;
+    height: 38px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    font-family: 'NeueHaasDisplayRoman', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 1.1em;
+    color: #FFFFFF;
+    background-color: #2A7D55;
+    border-radius: 30px;
+}
+.logo{
+    position: absolute;
+    left: 175px;
+    top: 541px;
+    width: auto;
+    height:34px;
+}
+.logo2{
+    position: absolute;
+    left: 78px;
+    top: 259px;
+    width: auto;
+    height:54px;
+}
+.rw{
+    position: absolute;
+    top: 518px;
+    left: 14px;
+    width: 277px;
+
+    font-family: 'NeueHaasDisplayRoman', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 8px;
+    line-height: 100%;
+    color: #FFFFFF;
+    text-align: center;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.arrow{
+    position:absolute;
+    width:5px;
+    height:10px;
+    top:15px;
+    left:103px;
+}
+.line{
+      position: absolute;
+      width: 5px;
+      stroke-width: 4px;
+      stroke: rgb(42, 125, 85);
+      left: 35px;
+      top: 49px;
+      height: 156px;
+}
+
+</style>
+</head>
+<body>
+<a href="javascript:window.open(window.clickTag)">
+<div id="banner">
+
+    <div class="img bg2"><img src="Global_skyline-2.jpg"></div>
+    <div class="img bg1"><img src="Global_skyline-1.jpg"></div>
+    <div class="img logo"><img src="logo.png"></div>
+    <div class="img logo2"><img src="logo.png"></div>
+
+    <div> 
+        <svg preserveAspectRatio="none" viewBox="0 0 5 156" class="line">
+            <line x1="2.5" x2="2.5" y1="0" y2="156"></line>
+        </svg>
+    </div>
+
+    <div class="copy1">
+        <div>Bringing global markets into focus </div>
+    </div>
+
+    <div class="copy2">
+        <div>The trading provider trusted by millions</div>
+    </div>
+
+    <div class="copy3">
+        <div>Open up a world of potential  </div>
+    </div>
+
+    <div class="copy4">
+        <div>Markets &nbsp; | &nbsp; Invest &nbsp; | &nbsp; Alpha&nbsp; | &nbsp; Connect</div>
+    </div> 
+
+    <div class="cta">
+        <div>Learn more </div>
+        <svg viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="arrow">
+              <path d="M0.566467 0.778381L5.13082 6.02511L0.566467 11.2718" stroke="white" stroke-width="1.22389"></path>
+        </svg>
+    </div>
+
+    <div class="rw">All trading involves risks, investing in derivatives products carries significant risks and is not suitable for all investors. CMC Markets provides general information only. Seek independent advice and visit cmcmarkets.com.au to view our PDS or IM (for CMC Pro accounts) and the relevant T&Cs (for Stockbroking accounts) documents when deciding whether to invest. Please also refer to the FSGs and TMDs for CMC Markets Asia Pacific Pty Ltd ABN 11 100 058 213, AFSL No. 238054 and CMC Markets Stockbroking Ltd, AFSL No. 246381. 
+    </div>
+</div>
+</a>
+
+<script>
+var loops = 0;
+var bannerWidth = document.querySelector("#banner").offsetWidth;
+var bannerHeight = document.querySelector("#banner").offsetHeight;
+gsap.set('#banner', {autoAlpha:1});
+
+TweenMax.set(".line",{transformOrigin:"0px 0px"});
+
+var tl=new TimelineMax({repeat:0,delay:0,onComplete:function(){this.tweenFromTo("start","end")}});
+tl .addLabel("start")
+
+.from(".line", 1, { scaleY:0, ease:Power2.easeOut},"+=0.0")
+.from(".copy1", 1, {opacity:0, autoAlpha:0, ease:Power2.easeOut}, "-=0.8")
+.from(".bg1", 1, {opacity:0, autoAlpha:0, ease:Power2.easeOut}, "-=0.0")
+.to(".copy1", 1, {opacity:0, autoAlpha:0, ease:Power2.easeOut}, "+=1.0") 
+.from(".copy2", 1, {opacity:0, autoAlpha:0, ease:Power2.easeOut}, "-=0.3")
+.to(".copy2, .line, .logo, .bg2, .bg1", 1, {opacity:0, autoAlpha:0, ease:Power2.easeOut}, "+=1.5")
+.from(".copy3,.logo2, .copy4, .rw", 1, {opacity:0, autoAlpha:0, ease:Power2.easeOut}, "-=0.0")
+.from(".cta", 1, {opacity:0, autoAlpha:0, ease:Power2.easeOut}, "-=0.5").addLabel("end")
+.to(".cta, .copy3, .logo2, .copy4, .rw", 1, {opacity:0, autoAlpha:0, ease:Power2.easeOut}, "+=2.0")
+</script>
+
+</body>
+</html>

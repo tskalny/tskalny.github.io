@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="ad.size" content="width=320, height=320">
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+    <script type="text/javascript">
+        var clickTag = "https://www.byfjordenfinans.se/fakturakop/";
+    </script>
+    <title>Banner</title>
+
+
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+
+<style type="text/css">
+
+html{align-items:center; display:flex; height:100%; width:100%; }
+
+body{margin:0; padding:0; margin-left:auto; margin-right:auto;}
+
+
+
+.main-container{
+
+	position: relative;
+
+	width: 320px;
+
+	height: 320px;
+
+	overflow: hidden;
+
+	background-color: #034d63;
+
+	cursor: pointer;
+
+	opacity: 0;
+
+}
+
+
+
+.img{
+
+	position: absolute;
+
+	left: 0px;
+
+	top: 0px;
+
+	width: 100%;
+
+	height: 100%;
+
+	-ms-transform: rotate(0.01deg); /* IE 9 */
+
+    -webkit-transform: rotate(0.01deg); /* Chrome, Safari, Opera */
+
+    transform: rotate(0.01deg);
+
+    background-repeat: no-repeat;
+
+    background-size: contain;
+
+}
+
+
+
+.img img{
+
+	position: absolute;
+
+	left: 0px;
+
+	top: 0px;
+
+	height: 100%;
+
+	-ms-transform: rotate(-0.01deg); /* IE 9 */
+
+    -webkit-transform: rotate(-0.01deg); /* Chrome, Safari, Opera */
+
+    transform: rotate(-0.01deg);
+
+     backface-visibility: hidden;
+
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transform-style: preserve-3d;
+
+	-ms-transform-style: preserve-3d;
+
+	-o-transform-style: preserve-3d;
+
+	transform-style: preserve-3d;
+
+    image-rendering: -webkit-optimize-contrast;
+
+    image-rendering: -webkit-crisp-edges;
+
+    will-change:transform;
+
+}
+
+
+
+.border{
+
+	position: absolute;
+
+	width: 100%;
+
+	height: 100%;
+
+	border: 1px solid #cccccc;
+
+	-webkit-box-sizing: border-box;
+
+	-moz-box-sizing: border-box;
+
+	box-sizing: border-box;
+
+}
+
+
+
+
+
+.pl{
+
+position: absolute;
+
+left: 0px;
+
+top: 0px;
+
+height: 100%;
+
+}
+
+.filtr{
+  opacity: 1;
+  mix-blend-mode: Color-Burn
+;
+ }
+
+
+</style>
+
+</head>
+
+<body>
+
+<a href="javascript:window.open(window.clickTag)">
+
+<div class="main-container" id="banner">
+
+
+<div class="img logo"><img src="logo.png"></div>
+<div class="img t1"><img src="t1.png"></div>
+<div class="img t2"><img src="t2.png"></div>
+
+<div class="img b1"><img src="b1.png"></div>
+<div class="img b2"><img src="b2.png"></div>
+<div class="img b3"><img src="b3.png"></div>
+<div class="img b4"><img src="b4.png"></div>
+<div class="img b5"><img src="b5.png"></div>
+<div class="img b6"><img src="b6.png"></div>
+<div class="img bettary"><img src="bettary.png"></div>
+<div class="img btt_full"><img src="btt_full.png"></div>
+
+
+
+
+
+<div class="border"></div>
+
+</div>
+</a>
+
+
+
+<script>
+
+gsap.set(".main-container", {autoAlpha:1});
+
+var bannerWidth = document.querySelector("#banner").offsetWidth;
+
+var bannerHeight = document.querySelector("#banner").offsetHeight;
+
+var loops = 1;
+
+gsap.set(".el1", {filter: "brightness(1)", transformOrigin:"50px 79px"});
+
+
+
+var tl=new TimelineMax({repeat:1,delay:0,onComplete:function(){this.tweenFromTo("start","end")}});
+
+
+
+tl .addLabel("start")
+
+.from(".t2", 1.0, {autoAlpha:0, stagger:0.2,  x:200,  ease:"power2.inOut"},0.5)
+.from(".t1", 1.0, {autoAlpha:0, stagger:0.2,  x:-200,  ease:"power2.inOut"},0.5)
+.from(".b1", 0.5, {autoAlpha:0, x:0, repeat:2, yoyo:true, ease:"power2.inOut"},1.0).addLabel("end")
+.from(".b2, .b3, .b4, .b5, .b6", 1.0, {autoAlpha:0, stagger:0.2, ease:"power2.inOut"},2.5)
+
+.from(".btt_full", 0.4, {autoAlpha:0, stagger:0.2,  ease:"power2.inOut"},3.5)
+
+
+
+
+.addLabel("end")
+
+.to(".t2, .bt, .check", 0.6, { stagger:0.2, autoAlpha:0, ease:"power2.inOut"},6.0)
+
+
+
+
+</script>
+
+</body>
+
+</html>
