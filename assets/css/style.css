@@ -354,6 +354,9 @@ p { margin: 0 0 1em; }
 }
 .banner-stage iframe { border: 0; display: block; }
 .banner-stage--wide { width: 100%; overflow-x: auto; }
+/* wide leaderboards: frame hugs the banner and centers, instead of a full-width box with empty space */
+.banner-stage--wide .banner-stage__frame { width: max-content; max-width: none; margin: 0 auto; }
+.banner-stage--wide .banner-stage__cap { text-align: center; }
 .banner-stage__cap { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--slate); }
 .live-note { color: var(--body-muted); font-size: 14px; margin: 0 0 26px; }
 
