@@ -278,6 +278,18 @@ p { margin: 0 0 1em; }
 .shot-small { max-width: 460px; }
 .shot-small .shot { background: var(--soft-stone); }
 .booklet-grid .shot { background: var(--soft-stone); }
+
+/* Design → Built: equal-height strip mixing real photos and design boards */
+.compare-strip { display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-start; }
+.compare-cell { display: flex; flex-direction: column; gap: 9px; margin: 0; }
+.compare-cell img {
+  height: 340px; width: auto; max-width: 100%; display: block;
+  border-radius: var(--r-sm); border: 1px solid var(--hairline); background: var(--soft-stone);
+}
+.compare-tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+.compare-tag--built { color: var(--coral); }
+.compare-tag--design { color: var(--slate); }
+@media (max-width: 640px) { .compare-cell img { height: 250px; } }
 /* section divider inside a case page */
 .case-subhead { margin: 0 0 28px; padding-top: 8px; }
 .case-subhead .mono-label { display: block; }

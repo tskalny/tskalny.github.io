@@ -88,13 +88,12 @@ const M = {
     ],
   },
   'kassowrobots-live': {
-    // real photos of the realized booth on the AUTOMATE 2026 show floor
+    // real photos of the realized booth on the AUTOMATE 2026 show floor (clean shots)
     cover: 'kassowrobots/Booth design/1782144399036.jfif',
     full: [
       'kassowrobots/Booth design/1782144399036.jfif',
+      'kassowrobots/Booth design/booth-overview.jpg',
       'kassowrobots/Booth design/1782230948229.jfif',
-      'kassowrobots/Booth design/1782421110489.jfif',
-      'kassowrobots/Booth design/1782223103491.jfif',
     ],
   },
   'kassowrobots-brochure': {

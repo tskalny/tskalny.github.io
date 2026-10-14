@@ -49,18 +49,18 @@ const data = {
     ],
   },
   kassowrobots: {
-    title: 'Kassow Robots', cat: 'Exhibition · Print · Brand', layout: 'gallery',
+    title: 'Kassow Robots', cat: 'Exhibition · Print · Brand', layout: 'compare',
     lead: 'Exhibition and print design for Kassow Robots (Denmark) — a full booth package for AUTOMATE 2026 in Chicago, plus brochures, white papers and brand collateral, all prepared for large-format print production.',
     meta: { Company: 'Kassow Robots · Denmark', Role: 'Graphic Designer · Freelance', Scope: 'Booth + print + brand', Tools: 'InDesign · Adobe CC' },
     overview: ['As a freelance graphic designer I produced a large-format exhibition booth for AUTOMATE 2026 (Chicago), technical white papers and brand-consistent marketing materials — all press-ready for professional print production.',
-      'The work spans stand graphics, printed brochures and supporting brand assets.'],
-    sectionLabel: { mono: 'Part 01 — Exhibition booth', heading: 'AUTOMATE 2026 booth · Chicago' },
+      'Below, the booth design sits next to real photos of it built and running on the show floor.'],
+    compare: { builtSlug: 'kassowrobots-live', designSlug: 'kassowrobots',
+      mono: 'Part 01 — Design → Built', heading: 'AUTOMATE 2026 booth · Chicago',
+      intro: 'The stand I designed, shown next to real photos of it realized on the AUTOMATE 2026 show floor — design and the built result, side by side.' },
     extraSections: [
-      { slug: 'kassowrobots-live', mono: 'Part 02 — Built', heading: 'Live on the show floor · AUTOMATE 2026',
-        intro: 'The booth design realized and built at AUTOMATE 2026 in Chicago — the stand I designed, in use on the trade-show floor.', layout: 'gallery' },
-      { slug: 'kassowrobots-brochure', mono: 'Part 03 — Print', heading: 'Brochure &amp; collateral',
+      { slug: 'kassowrobots-brochure', mono: 'Part 02 — Print', heading: 'Brochure &amp; collateral',
         intro: 'Printed brochures and marketing materials carrying the brand system into large-format print.', layout: 'gallery' },
-      { slug: 'kassowrobots-sig', mono: 'Part 04 — Brand assets', heading: 'Email signature',
+      { slug: 'kassowrobots-sig', mono: 'Part 03 — Brand assets', heading: 'Email signature',
         intro: 'A branded email-signature template for company-wide communications.', layout: 'small' },
     ],
   },
@@ -315,6 +315,21 @@ function extraSections(d) {
 
 function shots(slug, d, list) {
   const fig = (src, cap) => `<figure class="shot reveal" style="margin:0;"><img src="${src}" alt="${d.title}" loading="lazy" />${cap ? `<figcaption class="shot__cap">${cap}</figcaption>` : ''}</figure>`;
+  if (d.layout === 'compare') {
+    // equal-height strip interleaving real photos (Built) and design boards (Design)
+    const built = imgs(d.compare.builtSlug);
+    const design = imgs(d.compare.designSlug);
+    const cells = [];
+    const n = Math.max(built.length, design.length);
+    for (let i = 0; i < n; i++) {
+      if (built[i]) cells.push({ src: built[i], tag: 'Built', cls: 'built' });
+      if (design[i]) cells.push({ src: design[i], tag: 'Design', cls: 'design' });
+    }
+    const strip = cells.map(c =>
+      `<figure class="compare-cell reveal"><img src="${c.src}" alt="${d.title} — ${c.tag}" loading="lazy" /><figcaption class="compare-tag compare-tag--${c.cls}">${c.tag}</figcaption></figure>`).join('');
+    return `<div class="case-subhead reveal"><span class="mono-label">${d.compare.mono}</span><h2>${d.compare.heading}</h2><p>${d.compare.intro}</p></div>
+        <div class="compare-strip">${strip}</div>`;
+  }
   if (d.layout === 'single') return `<div class="case-shots">${fig(list[0], d.cap)}</div>`;
   if (d.layout === 'banner') {
     const live = liveBanners(slug, d);
