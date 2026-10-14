@@ -78,13 +78,23 @@ const M = {
     ],
   },
   kassowrobots: {
-    // exhibition booth boards (large presentation panels)
-    cover: 'kassowrobots/Booth design/A.png',
+    // card cover = real booth photo (more eye-catching); section = booth design boards
+    cover: 'kassowrobots/Booth design/1782144399036.jfif',
     full: [
       'kassowrobots/Booth design/A.png',
       'kassowrobots/Booth design/D.png',
       'kassowrobots/Booth design/С.png',
       'kassowrobots/Booth design/3638 × 1181_B.png',
+    ],
+  },
+  'kassowrobots-live': {
+    // real photos of the realized booth on the AUTOMATE 2026 show floor
+    cover: 'kassowrobots/Booth design/1782144399036.jfif',
+    full: [
+      'kassowrobots/Booth design/1782144399036.jfif',
+      'kassowrobots/Booth design/1782230948229.jfif',
+      'kassowrobots/Booth design/1782421110489.jfif',
+      'kassowrobots/Booth design/1782223103491.jfif',
     ],
   },
   'kassowrobots-brochure': {

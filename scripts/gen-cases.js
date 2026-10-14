@@ -56,9 +56,11 @@ const data = {
       'The work spans stand graphics, printed brochures and supporting brand assets.'],
     sectionLabel: { mono: 'Part 01 — Exhibition booth', heading: 'AUTOMATE 2026 booth · Chicago' },
     extraSections: [
-      { slug: 'kassowrobots-brochure', mono: 'Part 02 — Print', heading: 'Brochure &amp; collateral',
+      { slug: 'kassowrobots-live', mono: 'Part 02 — Built', heading: 'Live on the show floor · AUTOMATE 2026',
+        intro: 'The booth design realized and built at AUTOMATE 2026 in Chicago — the stand I designed, in use on the trade-show floor.', layout: 'gallery' },
+      { slug: 'kassowrobots-brochure', mono: 'Part 03 — Print', heading: 'Brochure &amp; collateral',
         intro: 'Printed brochures and marketing materials carrying the brand system into large-format print.', layout: 'gallery' },
-      { slug: 'kassowrobots-sig', mono: 'Part 03 — Brand assets', heading: 'Email signature',
+      { slug: 'kassowrobots-sig', mono: 'Part 04 — Brand assets', heading: 'Email signature',
         intro: 'A branded email-signature template for company-wide communications.', layout: 'small' },
     ],
   },
