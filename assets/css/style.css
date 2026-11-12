@@ -402,3 +402,19 @@ p { margin: 0 0 1em; }
   .work-grid { grid-template-columns: 1fr; }
   .footer__top { flex-direction: column; }
 }
+
+/* ---------- work groups ---------- */
+.work-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 48px; }
+.work-jump a {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 16px; border: 1px solid var(--hairline); border-radius: var(--r-pill);
+  font-size: 14px; color: var(--ink); text-decoration: none;
+  transition: border-color .2s ease, background .2s ease;
+}
+.work-jump a:hover { border-color: var(--ink); background: var(--soft-stone); }
+.work-jump span { font-family: var(--font-mono); font-size: 11px; color: var(--coral); }
+.work-group { scroll-margin-top: 96px; }
+.work-group + .work-group { margin-top: 72px; padding-top: 40px; border-top: 1px solid var(--hairline); }
+.work-group__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 32px; margin-bottom: 28px; }
+.work-group__head .mono-label { margin: 0; color: var(--ink); }
+.work-group__desc { margin: 0; max-width: 520px; color: var(--body-muted); font-size: 15px; }
